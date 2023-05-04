@@ -6,19 +6,19 @@ import { Analytics } from "./components/analytics";
 
 export const metadata: Metadata = {
 	title: {
-		default: "chronark.com",
-		template: "%s | chronark.com",
+		default: "visioart",
+		template: "%s | visioart.io",
 	},
-	description: "Software engineer at upstash.com and founder of planetfall.io",
+	description: "Video Production Company",
 	openGraph: {
-		title: "chronark.com",
+		title: "visioart",
 		description:
-			"Software engineer at upstash.com and founder of planetfall.io",
-		url: "https://chronark.com",
-		siteName: "chronark.com",
+			"Video Production Company",
+		url: "https://visioart.io",
+		siteName: "visioart",
 		images: [
 			{
-				url: "https://chronark.com/og.png",
+				url: "https://visioart.io/logo_visioart.png",
 				width: 1920,
 				height: 1080,
 			},
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 	},
 	icons: {
-		shortcut: "/favicon.png",
+		shortcut: "/logo_visioart.png",
 	},
 };
 const inter = Inter({
