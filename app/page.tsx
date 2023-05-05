@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-import { Redis } from '@upstash/redis'
 import Particles from "./components/particles";
 
 
