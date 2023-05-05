@@ -4,8 +4,7 @@ import { Redis } from '@upstash/redis'
 import Particles from "./components/particles";
 
 
-export const revalidate = 0 // disable cache 
-
+export const revalidate = 0 // disable
 
 //const navigation = [
 	//{ name: "Projects", href: "/projects" },
