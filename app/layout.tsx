@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 		},
 	},
 	twitter: {
-		title: "Chronark",
+		title: "visioart",
 		card: "summary_large_image",
 	},
 	icons: {
@@ -51,7 +51,7 @@ const inter = Inter({
 });
 
 const calSans = LocalFont({
-	src: "../public/fonts/CalSans-SemiBold.ttf",
+	src: "../public/fonts/Pump-W01-Light.otf",
 	variable: "--font-calsans",
 });
 
@@ -70,6 +70,6 @@ export default function RootLayout({
 				<Analytics />
 				{children}
 			</body>
-		</html>
+		</html>s
 	);
 }
