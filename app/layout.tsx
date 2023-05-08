@@ -70,6 +70,6 @@ export default function RootLayout({
 				<Analytics />
 				{children}
 			</body>
-		</html>s
+		</html>
 	);
 }
