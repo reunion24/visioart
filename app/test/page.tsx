@@ -19,10 +19,10 @@ interface Props {
   name: 'World'
 }
 
-class Home extends React.Component<Props> {
+class Navigation extends React.Component<Props> {
   render() {
     return <h1>Hello, {this.props.name}</h1>
   }
 }
 
-export default Home;
+export default Navigation;
