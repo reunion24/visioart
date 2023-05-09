@@ -2,21 +2,28 @@ import Link from "next/link";
 import React from "react";
 import Particles from "../components/particles";
 
-interface Props {
+interface VisioartComponentProps {
   name: string;
 }
 
-class Visioart extends React.Component<Props> {
-  static defaultProps = {
-    name: 'visioart.io'
-  }
-
-  render() {
-    return <h1>Hello, {this.props.name}</h1>
-  }
+interface VisioartComponentState {
+  count: number;
 }
 
-export default Visioart;
+class VisioartComponent extends React.Component<VisioartComponentProps, VisioartComponentState> 
+{
+  //constructor(props: VisioartComponentProps) {
+
+    static defaultVisioartComponentProps = {
+      name: 'visioart.io'
+    }
+    render(): React.ReactNode {
+
+    return <h1>Hello, {this.props.name}</h1>
+}  
+}
+
+export default VisioartComponent;
 
 //function visioart.io React.Component {
 	//static Props = {
