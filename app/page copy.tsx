@@ -10,9 +10,46 @@ const navigation = [
 	{ name: "Contact", href: "/test" },
 ];
 
+
+using System;
+
+namespace ExampleNamespace
+{
+    class ExampleClass
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        static void ExampleMethod1()
+        {
+            Console.WriteLine("ExampleMethod1");
+        }
+
+        static void ExampleMethod2()
+        {
+            var methodName = "ExampleMethod2";
+
+            foreach(var c in methodName)
+            {
+                if(char.IsUpper(c))
+                {
+                    Console.WriteLine("Upper case");
+                }
+                else
+                {
+                    Console.WriteLine("Lower case");
+                }
+            }
+        }
+    }
+}
+
 export default async function Home() {
 
 	return (
+	
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
 			<nav className="my-16 animate-fade-in">
 				
@@ -22,6 +59,9 @@ export default async function Home() {
 				className="absolute inset-0 -z-10 animate-fade-in"
 				quantity={100}
 			/>
+
+
+			
 			<h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
 				visioart.io
 			</h1>
