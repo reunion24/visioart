@@ -1,6 +1,9 @@
 import Link from "next/link";
 import React from "react";
+import ReactDOM from "react-dom/client";
 import Particles from "../components/particles";
+import VisioartComponent from "../components/visioartcomp";
+
 
 //interface VisioartComponentProps {
 //  name: string;
@@ -25,24 +28,21 @@ import Particles from "../components/particles";
 
 //export default VisioartComponent;
 
-class Particles extends React.Component {
-	static Props = {
-	  name: 'visioart.io'
-	}
-  
-render() {
-  return <h1>Hello, {this.props.name}</h1>
-	}
- }
-
 
 
 //interface Props {
   //name: 'World'
 //}
 
-//export default async function Home() {
+
+export default async function Home() {
+
+	return (
+<VisioartComponent
+				className="absolute inset-0 -z-10 animate-fade-in"
+				quantity={100}
+			/>
   
-  //  return <h1>Hello, {this.props.name}</h1>
+  )
   
-//}
+}
