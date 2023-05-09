@@ -30,7 +30,8 @@
     "rehype-pretty-code": "^0.9.4",
     "rehype-slug": "^5.1.0",
     "remark-gfm": "^3.0.1",
-    "typescript": "5.0.2"
+    "typescript": "5.0.2",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@opentelemetry/api": "^1.4.1",
