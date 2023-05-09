@@ -1,6 +1,6 @@
 //import Link from "next/link";
 import React from "react";
-import Link from "react-scroll";
+import {Link} from "react-scroll";
 import Particles from "./components/particles";
 
 
@@ -19,10 +19,11 @@ export default async function Home() {
 			<nav className="my-16 animate-fade-in">
 			<Link 
 			    to="/contact"
-				/>
+				>
 		<h1 className="text-sm text-zinc-500 ">
 			Contact
 			</h1>
+			</Link>
 			</nav>
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<Particles
