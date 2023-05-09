@@ -5,10 +5,10 @@ import Particles from "./components/particles";
 
 export const revalidate = 0 // disable
 
-//const navigation = [
+const navigation = [
 	//{ name: "Projects", href: "/projects" },
-	//{ name: "Contact", href: "/contact" },
-//];
+	{ name: "Contact", href: "/test" },
+];
 
 export default async function Home() {
 
