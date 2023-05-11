@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 //import Link from "react-scroll";
 import Particles from "./components/particles";
+import { Navigation } from "./components/nav";
 
 
 export const revalidate = 0 // disable
@@ -14,17 +15,10 @@ const navigation = [
 export default async function Home() {
 
 	return (
-		
+
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+			{/* <Navigation /> */}
 			<nav className="my-16 animate-fade-in">
-			<Link 
-			    href="/contact"
-				className="duration-200 text-zinc-400 hover:text-zinc-100"
-				>
-		<h1 className="text-sm text-zinc-500 ">
-			Contact
-			</h1>
-			</Link>
 			</nav>
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<Particles
