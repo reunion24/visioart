@@ -29,9 +29,7 @@ export default async function Home() {
 			</div>
 		</div>
 	);
-}
-
-function ArticleAboutUs() {
+	function ArticleAboutUs() {
 	return (
 		<article>
 			<h2>About Us</h2>
@@ -45,3 +43,6 @@ function ArticleAboutUs() {
 		</article>
 	);
 }
+}
+
+
