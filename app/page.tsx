@@ -13,9 +13,9 @@ const navigation = [
 export default async function Home() {
 	return (
 		<div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
-			{/* <Navigation /> */}
+			<Navigation />
 			<nav className="my-16 animate-fade-in">
-				{/* Navigation components */}
+				Navigation components
 			</nav>
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-left bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100} />
@@ -43,7 +43,7 @@ function ArticleAboutUs() {
 				neque. Sed finibus iaculis feugiat. Aliquam non eros non augue viverra placerat vitae sit
 				amet turpis. In hac habitasse platea dictumst.
 			</p>
-			{/* Additional content about us */}
+			Additional content about us
 		</article>
 	);
 }
