@@ -24,7 +24,7 @@ export default async function Home() {
 			</h1>
 			<div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 			<div className="my-16 text-center animate-fade-in">
-				<h1 className="text-sm text-zinc-500">COMING SOON</h1>
+				{/* <h1 className="text-sm text-zinc-500">COMING SOON</h1> */}
 				<div className="w-3/4 mx-auto"> {/* Adjust the width as per your requirement */}
 					<ArticleAboutUs />
 				</div>
