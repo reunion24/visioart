@@ -32,7 +32,7 @@ export default async function Home() {
       >
         <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}>
           <div className="my-16 text-center animate-fade-in">
-            <div className="w-3/4 mx-auto"> {/* Adjust the width as per your requirement */}
+            <div className="w-3/4 mx-auto text-white"> {/* Adjust the width and add text-white class */}
               <ArticleAboutUs />
             </div>
           </div>
@@ -46,8 +46,8 @@ export default async function Home() {
 function ArticleAboutUs() {
   return (
     <article>
-      <h2>About Us</h2>
-      <p>
+      <h2 className="text-white">About Us</h2> {/* Add text-white class */}
+      <p className="text-white"> {/* Add text-white class */}
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo metus quis
         suscipit fringilla. Fusce ac sem eget magna convallis pellentesque. Nulla vitae bibendum
         neque. Sed finibus iaculis feugiat. Aliquam non eros non augue viverra placerat vitae sit
