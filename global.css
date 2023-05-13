@@ -7,3 +7,16 @@
     -webkit-text-stroke: 1px rgb(255, 255, 255);
   }
 } 
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/path/to/your/font/Inter-Regular.woff2') format('woff2'),
+       url('/path/to/your/font/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}

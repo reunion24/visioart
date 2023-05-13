@@ -6,7 +6,6 @@ import { useClient } from "./components/useClient";
 import { allProjects } from "contentlayer/generated";
 import { Card } from "./components/card";
 import { Article } from "./projects/article";
-import { Redis } from "@upstash/redis";
 import { Eye } from "lucide-react";
 import Contact from './components/contact';
 import AboutUs from './components/about';
