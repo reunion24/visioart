@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-scroll';
 import { ArrowUp } from 'lucide-react';
+import ScrollToSlide from './scroll2slide'; // Import the ScrollToSlide component
 
 export const Navigation: React.FC = () => {
   const [disableScrollToSlide, setDisableScrollToSlide] = useState(false);
@@ -35,25 +36,31 @@ export const Navigation: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${
-          isIntersecting
-            ? 'bg-zinc-900/0 border-transparent'
-            : 'bg-zinc-900/500 border-zinc-800'
-        }`}
+        className={`fixed top-0 z-50 backdrop-blur duration-200 border-b ${
+            isIntersecting
+              ? 'bg-zinc-900/0 border-transparent'
+              : 'bg-zinc-900/500 border-zinc-800'
+          }`}
+          style={{ width: "100%" }} // Add a width style here
       >
         <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
           <div className="flex justify-between gap-8">
-            <Link
-              to="works"
-              spy={true}
-              smooth={!disableScrollToSlide}
-              offset={-70}
-              duration={500}
-              className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
-              onClick={handleWorksClick}
+            <ScrollToSlide
+              slideId="works_slide"
+              disableScroll={disableScrollToSlide} // Pass the disableScroll prop
             >
-              Works
-            </Link>
+              <Link
+                to="works"
+                spy={true}
+                smooth={!disableScrollToSlide}
+                offset={-70}
+                duration={500}
+                className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
+                onClick={handleWorksClick}
+              >
+                Works
+              </Link>
+            </ScrollToSlide>
             <Link
               to="about"
               spy={true}

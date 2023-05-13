@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback, useRef } from "react";
-import Link from 'next/link';
+// import Link from 'next/link';
 import Particles from "./components/particles";
 import { Navigation } from "./components/nav";
 import { useClient } from "./components/useClient";
@@ -11,6 +11,8 @@ import { Eye } from "lucide-react";
 import Contact from './components/contact';
 import AboutUs from './components/about';
 import Works from './components/works';
+import { Link } from 'react-scroll';
+
 
 
 
@@ -27,7 +29,7 @@ const Home: React.FC = () => {
   const ScrollToSlide = (slideId: string) => {
     const slide = document.getElementById(slideId);
     if (slide) {
-      slide.scrollIntoView({ behavior: "auto" });
+      slide.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -45,7 +47,7 @@ const Home: React.FC = () => {
     <div>
       <div id="title_slide" className="slide" onClick={() => ScrollToSlide('title_slide')}>
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
-          <Navigation />
+            <Navigation />
           <div className="flex flex-col items-center justify-center h-full">
             <div className="absolute inset-0 -z-10">
               <Particles className="h-full w-full animate-fade-in" quantity={100} />
