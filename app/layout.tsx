@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 		siteName: "visioart",
 		images: [
 			{
-				url: "https://visioart.io/logo_visioart.png",
+				url: "https://visioart.io/iconic_logo_visioart.png",
 				width: 1920,
 				height: 1080,
 			},
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 	},
 	icons: {
-		shortcut: "/logo_visioart.png",
+		shortcut: "/iconic_logo_visioart.png",
 	},
 };
 const inter = Inter({

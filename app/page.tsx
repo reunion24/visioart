@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useCallback } from "react";
 import Link from 'next/link';
 import Particles from "./components/particles";
 import { Navigation } from "./components/nav";
@@ -14,12 +16,17 @@ import Works from './components/works';
 export const revalidate = 0; // disable
 
 const Home: React.FC = () => {
+  const scrollToSlide = useCallback((slideId: string) => {
+    const slide = document.getElementById(slideId);
+    if (slide) {
+      slide.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <div>
       <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
-          {/* <Navigation /> */}
-       
-
+        {/* <Navigation /> */}
         <div className="absolute inset-0 -z-10">
           <Particles className="h-full w-full animate-fade-in" quantity={100} />
         </div>
@@ -33,39 +40,36 @@ const Home: React.FC = () => {
               COMING SOON
             </h1>
           </div>
-
         </div>
       </div>
 
-
-
-{/* 
-      <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      {/* <div id="works" className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
         <div className="absolute inset-0 -z-10">
           <Particles className="h-full w-full animate-fade-in" quantity={100} />
         </div>
-        <div className="my-16 text-center animate-fade-in">
-          <div className=" mx-auto text-white">
+        <div className="my-16 text-center animate-fade-in" onClick={() => scrollToSlide('works')}>
+          <div className="mx-auto text-white">
             <Works />
           </div>
-        </div>   
+        </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+
+      <div id="about" className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
         <div className="absolute inset-0 -z-10">
           <Particles className="h-full w-full animate-fade-in" quantity={100} />
         </div>
-        <div className="my-16 text-center animate-fade-in">
+        <div className="my-16 text-center animate-fade-in" onClick={() => scrollToSlide('about')}>
           <div className="w-3/4 mx-auto text-white">
+
             <AboutUs />
           </div>
         </div>
       </div>
-      
-      <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <div id="contact" className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
         <div className="absolute inset-0 -z-10">
           <Particles className="h-full w-full animate-fade-in" quantity={100} />
         </div>
-        <div className="my-16 text-center animate-fade-in">
+        <div className="my-16 text-center animate-fade-in" onClick={() => scrollToSlide('contact')}>
           <div className="text-white">
             <Contact />
           </div>
