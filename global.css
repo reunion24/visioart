@@ -19,6 +19,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
+  height: 100vh; /* Set the body height to 100% of viewport height */
+  /* overflow: hidden; Hide the default scrollbars */
 }
 
 
@@ -32,3 +34,5 @@ html {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
+
+
