@@ -1,41 +1,41 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Instagram, Youtube, Mail } from "lucide-react";
 import Link from "next/link";
-import { Navigation } from "../components/nav";
-import { Card } from "../components/card";
+import { Navigation } from "./nav";
+import { Card } from "./card";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/chronark_",
-		label: "Twitter",
-		handle: "@chronark_",
+		icon: <Instagram size={20} />,
+		href: "https://www.instagram.com/visioart.io/",
+		label: "Instagram",
+		handle: "@visioart.io",
 	},
 	{
 		icon: <Mail size={20} />,
-		href: "mailto:dev@chronark.com",
+		href: "mailto:adam@visioart.io",
 		label: "Email",
-		handle: "dev@chronark.com",
+		handle: "adam@visioart.io",
 	},
 	{
-		icon: <Github size={20} />,
-		href: "https://github.com/chronark",
-		label: "Github",
-		handle: "chronark",
+		icon: <Youtube size={20} />,
+		href: "https://www.youtube.com/channel/UCYPh0TPIcljdsNYJiMMWtPA",
+		label: "Youtube",
+		handle: "visioart.io",
 	},
 ];
 
-export default function Example() {
+export default function Contact() {
 	return (
-		<div className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
-			<Navigation />
+		<div id="contact" className=" bg-gradient-to-tl from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+			{/* <Navigation /> */}
 			<div className="container flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s) => (
 						<Card>
 							<Link
 								href={s.href}
-								target="_blank"
+								target="contact"
 								className="p-4 relative flex flex-col items-center gap-4 duration-700 group md:gap-8 md:py-24  lg:pb-48  md:p-16"
 							>
 								<span
