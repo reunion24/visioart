@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Navigation } from "../components/nav_new";
+import { Navigation } from "../components/nav";
 import Contact from "../components/contact";
 import AboutUs from "../components/about";
 import Works from "../components/works";
