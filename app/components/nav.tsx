@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-scroll';
-import { ArrowUp } from 'lucide-react';
+import Link from "next/link";
+import { ArrowUp, CloudCog } from 'lucide-react';
 
 export const Navigation: React.FC = () => {
   const [disableScrollToSlide, setDisableScrollToSlide] = useState(false);
@@ -26,11 +26,19 @@ export const Navigation: React.FC = () => {
   }, []);
 
   const handleWorksClick = () => {
-    setDisableScrollToSlide(true);
-    setTimeout(() => {
-      setDisableScrollToSlide(false);
-    }, disableDuration);
+    // setDisableScrollToSlide(true);
+    // setTimeout(() => {
+    //   setDisableScrollToSlide(false);
+    // }, disableDuration);
   };
+
+  const handleSlide = (slideId: string) => {
+    console.log(slideId);
+    const slide = document.getElementById(slideId);
+    if (slide) {
+      slide.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <header ref={ref}>
@@ -43,47 +51,34 @@ export const Navigation: React.FC = () => {
       >
         <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
           <div className="flex justify-between gap-8">
-            <Link
-              to="works"
-              spy={true}
-              smooth={!disableScrollToSlide}
-              offset={-70}
-              duration={500}
+            <button
               className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
-              onClick={handleWorksClick}
+              onClick={() => handleSlide('works')}
             >
               Works
-            </Link>
-            <Link
-              to="about"
-              spy={true}
-              smooth={!disableScrollToSlide}
-              offset={-70}
-              duration={500}
+            </button>
+            <button
+              // spy={true}
+              // smooth={!disableScrollToSlide}
+              // offset={-70}
+              // duration={500}
               className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
+              onClick={() => handleSlide('about')}
             >
               About Us
-            </Link>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={!disableScrollToSlide}
-              offset={-70}
-              duration={500}
+            </button>
+            <button
               className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
+              onClick={() => handleSlide('contact')}
             >
               Contact Us
-            </Link>
-            <Link
-              to="title"
-              spy={true}
-              smooth={!disableScrollToSlide}
-              offset={-70}
-              duration={500}
+            </button>
+            <button
               className="duration-200 text-zinc-300 hover:text-zinc-100 cursor-pointer"
+              onClick={() => handleSlide('title')}
             >
               <ArrowUp className="w-6 h-6 " />
-            </Link>
+            </button>
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use strict";
 import React from 'react';
 import './Works.css';
+import VideoImage from './videoImage';
 
 const Works = () => {
     // Array of Vimeo video IDs
@@ -8,30 +9,20 @@ const Works = () => {
         '76979871', '254514255', '290177185', '150389663', '105701629', '332331153'
     ];
 
-    // Generate a random color
-    const getRandomColor = () => {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+    // Array of image filenames
+    const imageFilenames = ['work1.jpg', 'work2.PNG', 'work3.PNG', 'work4.PNG', 'work5.PNG', 'work6.jpg'];
 
     return (
         <div id="works" className="works-section">
-            <h2 className="works-title">Works</h2>
+
             <div className="works-videos">
                 {vimeoIds.map((id, index) => (
-                    <div key={index} className="video-container" style={{backgroundColor: getRandomColor()}}>
-                        <a href={`https://player.vimeo.com/video/${id}`} target="_blank" rel="noreferrer" className="video-link">
-                            View Video {index + 1}
-                        </a>
-                    </div>
+                    <VideoImage key={index} index={index} id={id} />
                 ))}
             </div>
         </div>
     );
+
 }
 
 export default Works;

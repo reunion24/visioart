@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef } from "react";
 // import Link from 'next/link';
 import Particles from "./components/particles";
 import { Navigation } from "./components/nav";
@@ -12,60 +12,50 @@ import Contact from './components/contact';
 import AboutUs from './components/about';
 import Works from './components/works';
 import { Link } from 'react-scroll';
+import ScrollToSlide from "./components/scroll2slide";
 
 
 
 
 
-export const revalidate = 0; // disable
 
-const Home: React.FC = () => {
-  const useClientRef = useClient();
-  const title_slideRef = useRef(null);
-  const works_slideRef = useRef(null);
-  const about_slideRef = useRef(null);
-  const contact_slideRef = useRef(null);
+export default function Home() {
+  const [disableScrollToSlide, setDisableScrollToSlide] = useState(false);
+  const disableDuration = 1000; // 1 second
 
-  const ScrollToSlide = (slideId: string) => {
-    const slide = document.getElementById(slideId);
-    if (slide) {
-      slide.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleWorksClick = () => {
+    setDisableScrollToSlide(true);
+    setTimeout(() => {
+      setDisableScrollToSlide(false);
+    }, disableDuration);
   };
-
-
-  // const Home: React.FC = () => {
-  //   const scrollToSlide = useCallback((slideId: string) => {
-  //     const slide = document.getElementById(slideId);
-  //     if (slide) {
-  //       slide.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //   }, []);
 
 
   return (
     <div>
-      <div id="title_slide" className="slide" onClick={() => ScrollToSlide('title_slide')}>
-        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
-            <Navigation />
-          <div className="flex flex-col items-center justify-center h-full">
-            <div className="absolute inset-0 -z-10">
-              <Particles className="h-full w-full animate-fade-in" quantity={100} />
-            </div>
-            <h1 id="title" className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
-              visioart.io
+            <ScrollToSlide slideId="title_slide">
+
+      <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+        <Navigation />
+
+        <div className="flex flex-col items-center justify-center h-full">
+          <div className="absolute inset-0 -z-10">
+            <Particles className="h-full w-full animate-fade-in" quantity={100} />
+          </div>
+          <h1 id="title" className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text">
+            visioart.io
+          </h1>
+          <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+          <div className="my-16 text-center animate-fade-in">
+            <h1 className="text-sm text-zinc-500 ">
+              COMING SOON
             </h1>
-            <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
-            <div className="my-16 text-center animate-fade-in">
-              <h1 className="text-sm text-zinc-500 ">
-                COMING SOON
-              </h1>
-            </div>
           </div>
         </div>
-      </div>
+        </div>
 
-      <div id="works_slide" className="slide" onClick={() => ScrollToSlide('works_sldie')}>
+      </ScrollToSlide>
+      <ScrollToSlide slideId="title_slide">
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <div className="absolute inset-0 -z-10">
             <Particles className="h-full w-full animate-fade-in" quantity={100} />
@@ -76,9 +66,9 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
+      </ScrollToSlide>
 
-      <div id="about_slide" className="slide" onClick={() => ScrollToSlide('about_slide')}>
+      <ScrollToSlide slideId="about_slide">
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <div className="absolute inset-0 -z-10">
             <Particles className="h-full w-full animate-fade-in" quantity={100} />
@@ -90,8 +80,9 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div id="contact_slide" className="slide" onClick={() => ScrollToSlide('contact_slide')}>
+      </ScrollToSlide>
+
+      <ScrollToSlide slideId="contact_slide">
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <div className="absolute inset-0 -z-10">
             <Particles className="h-full w-full animate-fade-in" quantity={100} />
@@ -103,10 +94,8 @@ const Home: React.FC = () => {
           </div>
 
         </div>
-      </div>
-    </div>
+      </ScrollToSlide>
+    </div >
 
   );
 };
-
-export default Home;
