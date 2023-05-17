@@ -2,23 +2,21 @@ import React from "react";
 
 type ScrollToSlideProps = {
   slideId: string;
-  disableScroll: boolean;
   children: React.ReactNode;
 };
 
 const ScrollToSlide: React.FC<ScrollToSlideProps> = ({
   slideId,
-  disableScroll,
   children,
 }) => {
   const handleScrollToSlide = () => {
-    if (disableScroll) {
-      return;
-    }
-
     const slide = document.getElementById(slideId);
     if (slide) {
       slide.scrollIntoView({ behavior: "smooth" });
+// const yOffset = -150; 
+// const y = slide.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+// window.scrollTo({top: y, behavior: 'smooth'});
     }
   };
 

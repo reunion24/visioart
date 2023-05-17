@@ -20,12 +20,12 @@ export default function Home() {
 
   return (
     <div>
-                <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
 
-      <Navigation />
+        <Navigation />
       </div>
-      <ScrollToSlide slideId="works_slide" disableScroll={disableScrollToSlide}>
-        <div className="slide flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <ScrollToSlide slideId="works_slide">
+        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <div className="my-16 text-center animate-fade-in">
             <div className="mx-auto text-white">
               <Works />
@@ -33,8 +33,8 @@ export default function Home() {
           </div>
         </div>
       </ScrollToSlide>
-      <ScrollToSlide slideId="about_slide" disableScroll={disableScrollToSlide}>
-        <div className="slide flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <ScrollToSlide slideId="about_slide">
+        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <div className="my-16 text-center animate-fade-in">
             <div className="w-3/4 mx-auto text-white">
               <AboutUs />
@@ -42,8 +42,8 @@ export default function Home() {
           </div>
         </div>
       </ScrollToSlide>
-      <ScrollToSlide slideId="contact_slide" disableScroll={disableScrollToSlide}>
-        <div className="slide flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+      <ScrollToSlide slideId="contact_slide">
+        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <div className="my-16 text-center animate-fade-in">
             <div className="text-white">
               <Contact />

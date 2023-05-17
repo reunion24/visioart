@@ -25,13 +25,6 @@ export const Navigation: React.FC = () => {
     };
   }, []);
 
-  const handleWorksClick = () => {
-    // setDisableScrollToSlide(true);
-    // setTimeout(() => {
-    //   setDisableScrollToSlide(false);
-    // }, disableDuration);
-  };
-
   const handleSlide = (slideId: string) => {
     console.log(slideId);
     const slide = document.getElementById(slideId);
@@ -43,7 +36,7 @@ export const Navigation: React.FC = () => {
   return (
     <header ref={ref}>
       <div
-        className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${
+          className={`fixed inset-x-0 top-0 z-50 backdrop-blur duration-200 border-b ${
           isIntersecting
             ? 'bg-zinc-900/0 border-transparent'
             : 'bg-zinc-900/500 border-zinc-800'
@@ -55,23 +48,19 @@ export const Navigation: React.FC = () => {
               className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
               onClick={() => handleSlide('works')}
             >
-              Works
+              WORKS
             </button>
             <button
-              // spy={true}
-              // smooth={!disableScrollToSlide}
-              // offset={-70}
-              // duration={500}
               className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
               onClick={() => handleSlide('about')}
             >
-              About Us
+              ABOUT
             </button>
             <button
               className="duration-200 text-zinc-400 hover:text-zinc-100 cursor-pointer"
               onClick={() => handleSlide('contact')}
             >
-              Contact Us
+              CONTACT
             </button>
             <button
               className="duration-200 text-zinc-300 hover:text-zinc-100 cursor-pointer"
