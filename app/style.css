@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.nav {
+  /* flex-basis: 20%; Set the width of the navbar section to 20% of the container */
+  /* Additional styles for the navbar */
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.slides {
+  flex-grow: 1; /* Allow the slides section to grow and fill the remaining space */
+  /* Additional styles for the slides */
+}

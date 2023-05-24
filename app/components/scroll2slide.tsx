@@ -1,22 +1,23 @@
 import React from "react";
 
-type ScrollToSlideProps = {
+type SlideProps = {
   slideId: string;
   children: React.ReactNode;
 };
 
-const ScrollToSlide: React.FC<ScrollToSlideProps> = ({
+const Slide: React.FC<SlideProps> = ({
   slideId,
   children,
 }) => {
   const handleScrollToSlide = () => {
     const slide = document.getElementById(slideId);
     if (slide) {
-      slide.scrollIntoView({ behavior: "smooth" });
-// const yOffset = -150; 
-// const y = slide.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      // slide.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -1500; 
+      const y = slide.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-// window.scrollTo({top: y, behavior: 'smooth'});
+      window.scrollTo({top: y, behavior: 'smooth'});
+      console.log(y, 'test')
     }
   };
 
@@ -27,4 +28,4 @@ const ScrollToSlide: React.FC<ScrollToSlideProps> = ({
   );
 };
 
-export default ScrollToSlide;
+export default Slide;
