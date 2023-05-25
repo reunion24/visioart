@@ -41,7 +41,7 @@ export const Navigation: React.FC = () => {
           ${
             isIntersecting
           // false
-            ? 'bg-zinc-900/0 border-transparent'
+            ? 'border-transparent'
             : 'bg-zinc-900/500 '
           }
         `
