@@ -6,12 +6,12 @@
   .text-edge-outline {
     -webkit-text-stroke: 1px rgb(255, 255, 255);
   }
-} 
+}
 
 @font-face {
   font-family: 'Inter';
   src: url('/path/to/your/font/Inter-Regular.woff2') format('woff2'),
-       url('/path/to/your/font/Inter-Regular.woff') format('woff');
+    url('/path/to/your/font/Inter-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -19,7 +19,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  height: 100vh; /* Set the body height to 100% of viewport height */
+    height: 100vh;
+  /* Set the body height to 100% of viewport height */
   /* overflow: hidden; Hide the default scrollbars */
 }
 
@@ -27,12 +28,11 @@ body {
 .slide {
   height: 100vh;
   width: 100%;
-  scroll-snap-align: start; /* Enable scroll snapping */
+  scroll-snap-align: start;
+  /* Enable scroll snapping */
 }
 
 html {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
 }
-
-
