@@ -1,18 +1,156 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-}
-
-.nav {
-  /* flex-basis: 20%; Set the width of the navbar section to 20% of the container */
-  /* Additional styles for the navbar */
-  position: absolute;
-  top: 0;
-  width: 100%;
+  /* height: 100vh; */
 }
 
 .slides {
-  flex-grow: 1; /* Allow the slides section to grow and fill the remaining space */
+  /* flex-grow: 1; */
+  scroll-snap-type: y mandatory;
+  /* padding-top: 10vh !important; */
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.header {
+  width: 100%;
+  height: 10vh;
+  background-color: #ffffff;
+  color: black;
+  /* background-color: transparent; */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  inset: 0;
+  top: 0;
+  z-index: 50;
+}
+
+
+.title {
+  height: 100vh;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgb(188, 37, 37);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+
   /* Additional styles for the slides */
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 10vh;
+  scroll-snap-stop: always;
+}
+
+
+.works {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  color: blue;
+  background-color: aquamarine;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+  /* Additional styles for the slides */
+}
+
+
+
+.holster {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: column nowrap;
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  overflow: auto;
+  outline: 1px dashed lightgray;
+  flex: none;
+  width: 100%;
+  height: 100%;
+}
+
+.container.x {
+  width: 100%;
+  height: 128px;
+  flex-flow: row nowrap;
+}
+
+.x.mandatory-scroll-snapping {
+  scroll-snap-type: x mandatory;
+}
+
+.container>div {
+  text-align: center;
+  scroll-snap-align: center;
+  flex: none;
+}
+
+.x.container>div {
+  line-height: 128px;
+  font-size: 64px;
+  width: 100%;
+  height: 128px;
+}
+
+.container>div:nth-child(even) {
+  background-color: #87ea87;
+}
+
+.container>div:nth-child(odd) {
+  background-color: #87ccea;
+}
+
+.about {
+  bottom:0%;
+  height: 90vh;
+  width: 100%;
+  color: #87ccea;
+  background-image: url(/works_pics/work1.jpg);
+  /* background-size: repeat; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  /* background-color: rgb(219, 255, 127); */
+
+
+  /* Additional styles for the slides */
+}
+
+p {
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
 }

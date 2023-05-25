@@ -1,6 +1,6 @@
 "use strict";
 import React from 'react';
-import './Works.css';
+import './works.css';
 import VideoImage from './videoImage';
 
 const Works = () => {

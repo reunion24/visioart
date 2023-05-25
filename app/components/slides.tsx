@@ -4,9 +4,9 @@ import Contact from './contact';
 import AboutUs from './about';
 import Works from './works';
 
-function Slides() {
+function Slides() { 
 
-    return <div>
+    return <div className="slides">
       <Slide slideId="title_slide">
         <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           
