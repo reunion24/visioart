@@ -1,4 +1,3 @@
-"use client";
 
 import React, { useState, useCallback, useRef } from "react";
 // import Link from 'next/link';
@@ -13,7 +12,6 @@ import Slide from "./components/scroll2slide";
 import './style.css';
 
 import Particles from "./components/particles";
-import { useEffect } from 'react';
 
 import Contact from "./components/contact";
 import AboutUs from "./components/about";
@@ -24,7 +22,7 @@ import { Link } from 'react-scroll';
 
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
+  
   return (
     <div className="main">
 
@@ -63,7 +61,7 @@ export default function Home() {
 
         <section className="about">
           <div className="flex">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eleifend ligula quis lacus interdum, ut consectetur sapien feugiat. Integer eu justo eu risus commodo eleifend nec a est. Nullam ultrices, ligula ac tincidunt tincidunt, lorem arcu tincidunt purus, a efficitur libero ligula nec dui. Sed ultricies massa eu nisi consectetur, id eleifend neque efficitur. Fusce dapibus efficitur turpis, vitae hendrerit nibh mollis sed. Ut ullamcorper fringilla libero vitae consectetur.</p>
+<AboutUs />
           </div>
         </section>
 
