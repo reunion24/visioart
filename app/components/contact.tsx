@@ -1,7 +1,6 @@
 "use client";
 import { Instagram, Youtube, Mail } from "lucide-react";
 import Link from "next/link";
-import { Navigation } from "./nav";
 import { Card } from "./card";
 
 const socials = [
