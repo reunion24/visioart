@@ -1,29 +1,9 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from 'react';
 import Link from "next/link";
 import { ArrowUp, CloudCog } from 'lucide-react';
-
-export const Navigation: React.FC = () => {
-  const [disableScrollToSlide, setDisableScrollToSlide] = useState(false);
-  const disableDuration = 1000; // 1 second
-
-  const ref = useRef<HTMLElement>(null);
-  const [isIntersecting, setIntersecting] = useState(true);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIntersecting(entry.isIntersecting);
-    });
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
-    };
-  }, []);
+import '../style.css';
 
   const handleSlide = (slideId: string) => {
     console.log(slideId);
@@ -33,21 +13,28 @@ export const Navigation: React.FC = () => {
     }
   }
 
+  const Navigation = () => {
+    const [scrolled, setScrolled] = useState(false);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        const isScrolled = window.scrollY > 0;
+        setScrolled(isScrolled);
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+
   return (
-    <header ref={ref}>
-      <div
-          className={`fixed inset-x-0 top-0 z-50 bg-white duration-200 border-b 
-        
-          ${
-            isIntersecting
-          // false
-            ? 'border-transparent'
-            : 'bg-zinc-900/500 '
-          }
-        `
-      }
-      >
-        <div className="container flex flex-row-reverse items-center justify-between p-6 mx-auto">
+<header className={`navbar-fixed-top ${scrolled ? 'scrolled' : ''}`}>
+
+  
+      <div className={`fixed inset-x-0  z-50`}>
+        <div className="container2 flex flex-row-reverse items-center justify-between p-6 mx-auto">
           <div className="flex justify-between gap-8">
             <button
               className="duration-200 text-black hover:text-zinc-100 cursor-pointer"
@@ -79,3 +66,5 @@ export const Navigation: React.FC = () => {
     </header>
   );
 };
+
+export default Navigation;
