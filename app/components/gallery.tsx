@@ -4,7 +4,7 @@ import './gallery.css';
 
 const Gallery = () => {
 
-  const imageFilenames = ['work1.jpg', 'work2.PNG', 'work3.PNG', 'work4.PNG', 'work5.PNG', 'work6.jpg'];
+  // const imageFilenames = ['work1.jpg', 'work2.PNG', 'work3.PNG', 'work4.PNG', 'work5.PNG', 'work6.jpg'];
 
 
   return (

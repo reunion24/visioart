@@ -51,6 +51,7 @@ export default function Home() {
         <section className="page2">
     
               <Gallery />
+              {/* <Carousrel /> */}
             
         </section>
 
