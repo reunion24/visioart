@@ -17,6 +17,7 @@
   width: 100%;
   height: 14vh;
   background-color: transparent;
+  color: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
   display: flex;
@@ -24,19 +25,25 @@
   inset: 0;
   top: 0;
   z-index: 990;
-  transition: background-color 200ms linear;
-
+  transition: background-color 200ms ease-in-out;
 }
 
 .navbar-fixed-top:not(.scrolled) {
   background-color: transparent;
+  color: white;
 }
 
 .navbar-fixed-top.scrolled {
   background-color: #ffffff;
+
+  color: #858585;
+}
+.cursor-pointer:hover {
+  color: black;
 }
 
-.title {
+
+.page1 {
   height: 100vh;
   width: 100%;
   color: rgb(255, 255, 255);
@@ -65,7 +72,7 @@ section {
 }
 
 
-.works {
+.page2 {
   position: relative;
   height: 86vh;
   width: 100%;
@@ -83,61 +90,34 @@ section {
 }
 
 
-
-.holster {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-flow: column nowrap;
-  font-family: monospace;
-}
-
-.container {
-  display: flex;
-  overflow: auto;
-  outline: 1px dashed lightgray;
-  flex: none;
-  width: 100%;
-  height: 100%;
-}
-
-.container.x {
-  width: 100%;
-  height: 128px;
-  flex-flow: row nowrap;
-}
-
-.x.mandatory-scroll-snapping {
-  scroll-snap-type: x mandatory;
-}
-
-.container>div {
-  text-align: center;
-  scroll-snap-align: end;
-  scroll-snap-stop: always;
-  flex: none;
-}
-
-.x.container>div {
-  line-height: 128px;
-  font-size: 64px;
-  width: 100%;
-  height: 128px;
-}
-
-.container>div:nth-child(even) {
-  background-color: #87ea87;
-}
-
-.container>div:nth-child(odd) {
-  background-color: #87ccea;
-}
-
-.about {
+.page3 {
   bottom: 0%;
   height: 86vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto4.jpeg);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  /* background-color: rgb(219, 255, 127); */
+
+
+  /* Additional styles for the slides */
+}
+
+
+.page4 {
+  bottom: 0%;
+  height: 86vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto2.jpeg);
   background-blend-mode: darken;
   background-position: center;
   background-repeat: no-repeat;

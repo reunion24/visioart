@@ -17,6 +17,7 @@ import Contact from "./components/contact";
 import AboutUs from "./components/about";
 import Works from "./components/works";
 import { Link } from 'react-scroll';
+import Gallery from "./components/gallery";
 
 
 
@@ -32,7 +33,7 @@ export default function Home() {
 
       <div className="slides">
 
-        <section className="title">
+        <section className="page1">
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
 
             <div className="flex flex-col items-center justify-center h-full">
@@ -47,22 +48,30 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="works">
-          <div className="holster">
-            <div className="container x mandatory-scroll-snapping" dir="ltr">
-              <div>X Mand. LTR</div>
-              <div>2</div>
-              <div>3</div>
-              <div>4</div>
-              <div>5</div>
-            </div>
-          </div>
+        <section className="page2">
+    
+              <Gallery />
+            
         </section>
 
-        <section className="about">
-          <div className="flex">
-<AboutUs />
+        <section className="page3">
+        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+          <div className="my-16 text-center animate-fade-in">
+            <div className="w-3/4 mx-auto text-white">
+              <AboutUs />
+            </div>
           </div>
+        </div>
+        </section>
+
+        <section className="page4">
+        <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+          <div className="my-16 text-center animate-fade-in">
+            <div className="w-3/4 mx-auto text-white">
+              <Contact />
+            </div>
+          </div>
+        </div>
         </section>
 
 

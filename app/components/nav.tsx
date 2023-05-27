@@ -32,30 +32,30 @@ import '../style.css';
   return (
 <header className={`navbar-fixed-top ${scrolled ? 'scrolled' : ''}`}>
 
-  
+
       <div className={`fixed inset-x-0  z-50`}>
         <div className="container2 flex flex-row-reverse items-center justify-between p-6 mx-auto">
           <div className="flex justify-between gap-8">
             <button
-              className="duration-200 text-black hover:text-zinc-100 cursor-pointer"
+              className="duration-200 cursor-pointer"
               onClick={() => handleSlide('works')}
             >
               WORKS
             </button>
             <button
-              className="duration-200 text-black hover:text-zinc-100 cursor-pointer"
+              className="duration-200 cursor-pointer"
               onClick={() => handleSlide('about')}
             >
               ABOUT
             </button>
             <button
-              className="duration-200 text-black hover:text-zinc-100 cursor-pointer"
+              className="duration-200 cursor-pointer"
               onClick={() => handleSlide('contact')}
             >
               CONTACT
             </button>
             <button
-              className="duration-200 text-black hover:text-zinc-100 cursor-pointer"
+              className="duration-200 cursor-pointer"
               onClick={() => handleSlide('title')}
             >
               <ArrowUp className="w-6 h-6 " />

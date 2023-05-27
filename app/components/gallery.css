@@ -1,0 +1,56 @@
+.holster {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    font-family: monospace;
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    overflow: auto;
+    /* outline: 1px dashed lightgray; */
+    flex: none;
+
+    /* max-width: 100vw; */
+    height: 100vh;
+}
+
+.container.x {
+    width: 100%;
+    /* height: 128px; */
+    height: 100%;
+    flex-flow: row nowrap;
+}
+
+.x.mandatory-scroll-snapping {
+    scroll-snap-type: x mandatory;
+}
+
+.container>div {
+    text-align: center;
+    scroll-snap-align: end;
+    scroll-snap-stop: always;
+    flex: none;
+}
+
+.x.container>div {
+    line-height: 86vh;
+    font-size: 50%;
+    width: 100vw;
+    height: 86vh;
+    bottom: 0;
+}
+
+.container>div:nth-child(even) {
+    background-color: #87ea87;
+}
+
+.container>div:nth-child(odd) {
+    background-color: #87ccea;
+}
