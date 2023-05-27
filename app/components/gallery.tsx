@@ -8,7 +8,7 @@ const Gallery = () => {
 
 
   return (
-    <div className="holster w-screen">
+    <div className="holster">
       <div className="container x mandatory-scroll-snapping" dir="ltr">
         <div>
          1
