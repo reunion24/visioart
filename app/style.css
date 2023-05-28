@@ -21,7 +21,7 @@ body {
   inset: 0;
   top: 0;
   z-index: 990;
-  transition: background-color 200ms ease-in-out;
+  transition: background-color 20ms ease-in-out;
 }
 
 .navbar-fixed-top:not(.scrolled) {
@@ -30,7 +30,7 @@ body {
 }
 
 .navbar-fixed-top.scrolled {
-  background-color: #ffffff;
+  background-color: white;
 
   color: #858585;
 }
@@ -58,9 +58,8 @@ section {
   height: 100vh;
   width: 100%;
   color: rgb(255, 255, 255);
-  background: rgba(56, 56, 56, 0.7) url(/bg_photos/bgphoto1.jpeg);
+  background: rgba(56, 56, 56, 0.7) url(/bg_photos/bgphoto1.jpeg) fixed center;
   background-blend-mode: darken;
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   align-items: center;
@@ -75,8 +74,6 @@ section {
 
   /* Additional styles for the slides */
 }
-
-
 
 .page2 {
   position: relative;

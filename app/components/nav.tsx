@@ -18,7 +18,7 @@ import '../style.css';
   
     useEffect(() => {
       const handleScroll = () => {
-        const isScrolled = window.scrollY > 0;
+        const isScrolled = window.scrollY > window.innerHeight;
         setScrolled(isScrolled);
       };
   
@@ -56,7 +56,7 @@ import '../style.css';
             </button>
             <button
               className="duration-200 cursor-pointer"
-              onClick={() => handleSlide('title')}
+              onClick={() => handleSlide('header')}
             >
               <ArrowUp className="w-6 h-6 " />
             </button>

@@ -13,7 +13,7 @@ const Works = () => {
     const imageFilenames = ['work1.jpg', 'work2.PNG', 'work3.PNG', 'work4.PNG', 'work5.PNG', 'work6.jpg'];
 
     return (
-        <div id="works" className="works-section">
+        <div className="works-section">
 
             <div className="works-videos">
                 {vimeoIds.map((id, index) => (
