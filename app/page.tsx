@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 // import Link from 'next/link';
 
 import Navigation from "./components/nav";
+import Footer from "./components/footer";
 import { useClient } from "./components/useClient";
 import { allProjects } from "contentlayer/generated";
 import { Card } from "./components/card";
@@ -19,7 +20,7 @@ import AboutUs from "./components/about";
 import Works from "./components/works";
 import { Link } from 'react-scroll';
 import Gallery from "./components/gallery";
-
+import LogoComponent from "./components/logo";
 
 
 
@@ -32,19 +33,19 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-      const fastScroll = scrolled * 6; // Multiply by 5 to make opacity change faster
+      const fastScroll = scrolled * 2; // Multiply by 5 to make opacity change faster
       // Ensure the value of opacity stays between 0 and 1
       let newOpacity = 1 - fastScroll;
       if (newOpacity < 0) newOpacity = 0;
       if (newOpacity > 1) newOpacity = 1;
-  
-      let newScale = 1 - 0.4 * fastScroll;
+
+      let newScale = 1 - 0.4 * (fastScroll * 3);
       if (newScale < 0.6) newScale = 0.6;
       if (newScale > 1) newScale = 1;
-  
+
       setStyle({ opacity: newOpacity, transform: `scale(${newScale})` });
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -56,7 +57,12 @@ export default function Home() {
 
       <div className="navbar-fixed-top">
         <Navigation />
+        <LogoComponent/>
       </div >
+
+      <div className="footer-fixed-bottom">
+        <Footer />
+      </div>
 
       <div className="slides">
 
@@ -68,7 +74,7 @@ export default function Home() {
                 <Particles className="h-full w-full animate-fade-in" quantity={100} />
               </div>
               <div style={style}>
-              <h1 className="z-10
+                <h1 className="z-10
                text-4xl 
                text-transparent 
                duration-1000 
@@ -82,17 +88,19 @@ export default function Home() {
                md:text-9xl 
                whitespace-nowrap 
                bg-clip-text">
-                visioart.io
-              </h1>
+                  visioart.io
+                </h1>
               </div>
               <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
             </div>
           </div>
+
         </section>
 
         <section id="works" className="page2">
 
           <Gallery />
+
           {/* <Carousrel /> */}
 
         </section>
@@ -121,6 +129,7 @@ export default function Home() {
 
       </div>
     </div >
+
   );
 };
 

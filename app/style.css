@@ -24,16 +24,35 @@ body {
   transition: background-color 20ms ease-in-out;
 }
 
+
 .navbar-fixed-top:not(.scrolled) {
   background-color: transparent;
   color: white;
+  /* opacity: 0; */
+
 }
 
 .navbar-fixed-top.scrolled {
   background-color: white;
-
   color: #858585;
 }
+
+.footer-fixed-bottom {
+  width: 100%;
+  height: 1vh;
+  background-color: white;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: fixed;
+  /* inset: 0; */
+  bottom: 0;
+  z-index: 990;
+  transition: background-color 20ms ease-in-out;
+
+}
+
 .cursor-pointer:hover {
   color: black;
 }
