@@ -16,7 +16,7 @@ body {
 
 }
 
-.container {
+.visio-container {
     display: flex;
     /* width: 100vw; */
     overflow: auto;
@@ -27,7 +27,7 @@ body {
     height: 100vh;
 }
 
-.container.x {
+.visio-container.x {
     width: 100%;
     /* height: 128px; */
     height: 100%;
@@ -38,14 +38,14 @@ body {
     scroll-snap-type: x mandatory;
 }
 
-.container>div {
+.visio-container>div {
     text-align: center;
     scroll-snap-align: end;
     scroll-snap-stop: always;
     flex: none;
 }
 
-.x.container>div {
+.x.visio-container>div {
     line-height: 86vh;
     font-size: 50%;
     width: 100%;
@@ -53,11 +53,11 @@ body {
     bottom: 0;
 }
 
-.container>div:nth-child(even) {
+.visio-container>div:nth-child(even) {
     background-color: #87ea87;
 }
 
-.container>div:nth-child(odd) {
+.visio-container>div:nth-child(odd) {
     background-color: #87ccea;
 }
 

@@ -1,17 +1,17 @@
 "use client"
 
 import React, { useState, useEffect } from "react";
+import { handleSlide } from "./nav";
 
 
 export default function LogoComponent() {
-    const [style, setStyle] = useState({ opacity: 1 });
+    const [style, setStyle] = useState({ opacity: 0 });
 
     useEffect(() => {
       const handleScroll = () => {
         const scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
         const fastScroll = scrolled * 6;
-        // const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        // const isScrolled = scrollTop > window.innerHeight * 0.5; // Change the value here
+     
 
         let newOpacity = 0 + fastScroll;
         if (newOpacity < 0) newOpacity = 0;
@@ -29,12 +29,12 @@ export default function LogoComponent() {
     }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id="logo_nav" className="flex flex-col items-center justify-center">
       <div className="flex flex-col items-center justify-center h-full">
         <div className="absolute inset-0 -z-10"></div>
         <div style={style} >
           <h1 className="z-999 text-4xl text-transparent duration-1000 bg-white justify-end cursor-default text-edge-outline animate-title font-display sm:text-4xl md:text-6xl whitespace-nowrap bg-clip-text">
-            visioart.io
+          <button className="duration-200 cursor-pointer" onClick={() => handleSlide('header')}>visioart.io</button>
           </h1>
         </div>
       </div>

@@ -9,9 +9,23 @@ const Gallery = () => {
 
   return (
     <div className="holster">
-      <div className="container x mandatory-scroll-snapping" dir="ltr">
+      <div className="visio-container x mandatory-scroll-snapping" dir="ltr">
         <div>
-         1
+        <iframe width="100%" height="100%" 
+        src="https://www.youtube.com/embed/iGWAERQnbjE?controls=0" 
+        title="YouTube video player" 
+        frameBorder="0" 
+        allow="accelerometer; 
+        autoplay; 
+        clipboard-write; 
+        encrypted-media; 
+        gyroscope; 
+        picture-in-picture; 
+        web-share" 
+        allowFullScreen
+        >
+
+        </iframe>
         </div>
         <div>2</div>
         <div>3</div>

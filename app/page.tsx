@@ -20,7 +20,6 @@ import AboutUs from "./components/about";
 import Works from "./components/works";
 import { Link } from 'react-scroll';
 import Gallery from "./components/gallery";
-import LogoComponent from "./components/logo";
 
 
 
@@ -31,6 +30,7 @@ export default function Home() {
   const [style, setStyle] = useState({ opacity: 1, transform: "scale(1)" });
 
   useEffect(() => {
+    const navLogo = document.getElementById("logo_nav");
     const handleScroll = () => {
       const scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
       const fastScroll = scrolled * 2; // Multiply by 5 to make opacity change faster
@@ -43,8 +43,19 @@ export default function Home() {
       if (newScale < 0.6) newScale = 0.6;
       if (newScale > 1) newScale = 1;
 
+      const logoOffset = navLogo?.offsetTop;
+      const logoHeight = navLogo?.offsetHeight;
+      if (!navLogo)
+        return null;
+      let rect = navLogo.getBoundingClientRect();
+      let y = rect.top;
+      console.log("nav_logo", logoOffset + logoHeight);
+      console.log("main_title", document.getElementById('banner-logo-wrapper')?.offsetTop, y);
+
+
       setStyle({ opacity: newOpacity, transform: `scale(${newScale})` });
     };
+
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -57,7 +68,6 @@ export default function Home() {
 
       <div className="navbar-fixed-top">
         <Navigation />
-        <LogoComponent/>
       </div >
 
       <div className="footer-fixed-bottom">
@@ -73,7 +83,7 @@ export default function Home() {
               <div className="absolute inset-0 -z-10">
                 <Particles className="h-full w-full animate-fade-in" quantity={100} />
               </div>
-              <div style={style}>
+              <div style={style} id="banner-logo-wrapper">
                 <h1 className="z-10
                text-4xl 
                text-transparent 

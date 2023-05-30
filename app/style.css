@@ -21,7 +21,7 @@ body {
   inset: 0;
   top: 0;
   z-index: 990;
-  transition: background-color 20ms ease-in-out;
+  transition: background-color 2ms ease-in-out;
 }
 
 
@@ -33,8 +33,20 @@ body {
 }
 
 .navbar-fixed-top.scrolled {
-  background-color: white;
+  background-color: black;
   color: #858585;
+}
+
+.visio-logonav {
+
+  color: white;
+  z-index: 999;
+  transition: color 200ms ease-in-out;
+}
+
+.visio-logonav.navbar-fixed-top.scrolled {
+
+  color: black !important;
 }
 
 .footer-fixed-bottom {
@@ -51,6 +63,10 @@ body {
   z-index: 990;
   transition: background-color 20ms ease-in-out;
 
+}
+
+.cursor-pointer {
+  z-index: 999;
 }
 
 .cursor-pointer:hover {
