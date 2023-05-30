@@ -20,9 +20,24 @@ body {
   position: fixed;
   inset: 0;
   top: 0;
-  z-index: 990;
-  transition: background-color 2ms ease-in-out;
+  z-index: 880;
+  transition: background-color 200ms ease-in-out;
 }
+
+/* .fade-in {
+  opacity: 0;
+  animation: fade-in-animation 200ms ease-in-out;
+}
+
+@keyframes fade-in-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
 
 
 .navbar-fixed-top:not(.scrolled) {
@@ -33,8 +48,16 @@ body {
 }
 
 .navbar-fixed-top.scrolled {
-  background-color: black;
+  background-color: white;
   color: #858585;
+}
+
+
+
+.visio-bg {
+  background-color: black;
+  transition: color 200ms ease-in-out;
+
 }
 
 .visio-logonav {
@@ -42,11 +65,6 @@ body {
   color: white;
   z-index: 999;
   transition: color 200ms ease-in-out;
-}
-
-.visio-logonav.navbar-fixed-top.scrolled {
-
-  color: black !important;
 }
 
 .footer-fixed-bottom {

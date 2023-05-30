@@ -49,7 +49,7 @@ export default function Home() {
         return null;
       let rect = navLogo.getBoundingClientRect();
       let y = rect.top;
-      console.log("nav_logo", logoOffset + logoHeight);
+      // console.log("nav_logo", logoOffset + logoHeight);
       console.log("main_title", document.getElementById('banner-logo-wrapper')?.offsetTop, y);
 
 
