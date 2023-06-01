@@ -15,12 +15,18 @@ import '../style.css';
 
   const Footer = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [scrollProgress, setScrollProgress] = useState(0);
   
     useEffect(() => {
       const handleScroll = () => {
-        const isScrolled = window.scrollY > window.innerHeight;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const progress = (scrollTop / scrollHeight) * 100;
+        const isScrolled = scrollTop > window.innerHeight * 0.86; // Change the value here
         setScrolled(isScrolled);
+        setScrollProgress(progress);
       };
+  
   
       window.addEventListener('scroll', handleScroll);
   
@@ -31,7 +37,6 @@ import '../style.css';
 
   return (
 <header className={`footer-fixed-bottom ${scrolled ? 'scrolled' : ''}`}>
-
 
       <div className={`fixed bottom-0 item-center inset-x-0 z-50`}>
         <div className="container2 flex flex-row-reverse items-center justify-center p-3 mx-auto">

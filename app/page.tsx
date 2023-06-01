@@ -130,10 +130,12 @@ export default function Home() {
             <div className="my-16 text-center animate-fade-in">
               <div className="w-3/4 mx-auto text-white">
                 <Contact />
+                 {/* <Works /> */}
               </div>
             </div>
           </div>
         </section>
+        
 
 
 

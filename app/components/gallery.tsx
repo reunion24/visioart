@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import './gallery.css';
+import Works from './works';
 
 const Gallery = () => {
 
@@ -11,7 +12,7 @@ const Gallery = () => {
     <div className="holster">
       <div className="visio-container x mandatory-scroll-snapping" dir="ltr">
         <div>
-        <iframe width="100%" height="100%" 
+        {/* <iframe width="100%" height="100%" 
         src="https://www.youtube.com/embed/iGWAERQnbjE?controls=0" 
         title="YouTube video player" 
         frameBorder="0" 
@@ -25,7 +26,9 @@ const Gallery = () => {
         allowFullScreen
         >
 
-        </iframe>
+        </iframe> */}
+
+        <Works />
         </div>
         <div>2</div>
         <div>3</div>

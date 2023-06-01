@@ -24,22 +24,6 @@ body {
   transition: background-color 200ms ease-in-out;
 }
 
-/* .fade-in {
-  opacity: 0;
-  animation: fade-in-animation 200ms ease-in-out;
-}
-
-@keyframes fade-in-animation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
-
-
-
 .navbar-fixed-top:not(.scrolled) {
   background-color: transparent;
   color: white;
@@ -79,7 +63,19 @@ body {
   /* inset: 0; */
   bottom: 0;
   z-index: 990;
-  transition: background-color 20ms ease-in-out;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+
+}
+
+.footer-fixed-bottom:not(.scrolled) {
+  
+  opacity: 0;
+
+}
+
+.footer-fixed-bottom.scrolled {
+  opacity: 1;
 
 }
 
@@ -132,15 +128,12 @@ section {
   position: relative;
   height: 86vh;
   width: 100%;
-  color: blue;
-  background-color: aquamarine;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   display: flex;
   flex-grow: 1;
 
-  font-size: 48px;
   font-family: 'Inter', sans-serif;
   /* Additional styles for the slides */
 }
