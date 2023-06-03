@@ -30,7 +30,7 @@ export default function Home() {
   const [style, setStyle] = useState({ opacity: 1, transform: "scale(1)" });
 
   useEffect(() => {
-    const navLogo = document.getElementById("logo_nav");
+    const navLogo = document.getElementById("logo-nav");
     const handleScroll = () => {
       const scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
       const fastScroll = scrolled * 2; // Multiply by 5 to make opacity change faster
