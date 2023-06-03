@@ -36,11 +36,19 @@ body {
   color: #858585;
 }
 
+#logo-nav {
+  position: relative;
+}
 
+/* #logo-nav.scrolled {
+  scale: 1;
+  top: 0px;
+  position: relative;
+} */
 
 .visio-bg {
   background-color: black;
-  transition: color 200ms ease-in-out;
+  transition: background-color 100ms ease-in-out;
 
 }
 
@@ -48,7 +56,7 @@ body {
 
   color: white;
   z-index: 999;
-  transition: color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
 }
 
 .footer-fixed-bottom {
