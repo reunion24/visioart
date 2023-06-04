@@ -70,9 +70,9 @@ export default function Home() {
         <Navigation />
       </div >
 
-      <div className="footer-fixed-bottom">
+      {/* <div className="footer-fixed-bottom">
         <Footer />
-      </div>
+      </div> */}
 
       <div className="slides">
 
@@ -80,10 +80,10 @@ export default function Home() {
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
 
             <div className="flex flex-col items-center justify-center h-full">
-              <div className="absolute inset-0 -z-10">
+              {/* <div className="absolute inset-0 -z-10">
                 <Particles className="h-full w-full animate-fade-in" quantity={100} />
-              </div>
-              <div style={style} id="banner-logo-wrapper">
+              </div> */}
+              {/* <div style={style} id="banner-logo-wrapper">
                 <h1 className="z-10
                text-4xl 
                text-transparent 
@@ -100,8 +100,8 @@ export default function Home() {
                bg-clip-text">
                   visioart.io
                 </h1>
-              </div>
-              <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
+              </div> */}
+              {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
             </div>
           </div>
 

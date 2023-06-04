@@ -38,12 +38,12 @@ const Navigation = () => {
 
 
   return (
-    <header className={`navbar-fixed-top animate-fade-in ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`navbar-fixed-top  ${scrolled ? 'scrolled' : ''}`}>
       <div className="visio-logonav">
         <LogoComponent scrolled={ scrolled } />
       </div>
       <div className={`fixed inset-x-0 z-999`}>
-        <div className="container  flex flex-row-reverse items-center justify-between p-6 mx-auto">
+        <div className="container animate-fade-in flex flex-row-reverse items-center justify-between p-6 mx-auto">
           <div className="flex justify-between gap-8">
             <button className="duration-200 cursor-pointer" onClick={() => handleSlide('works')}>
               WORKS

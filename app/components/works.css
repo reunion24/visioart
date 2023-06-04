@@ -45,7 +45,7 @@
 }
 
 
-  
+
 
 .video-container {
     position: relative;
@@ -96,7 +96,7 @@
 .video-link {
     transform: translateY(20%);
     opacity: 0;
- 
+
 }
 
 .video-container:hover .video-link {
@@ -109,4 +109,36 @@
 
 .video-container:hover .video-overlay {
     opacity: 1;
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+    .popup-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        display: block;
+    }
+
+    .modal-close {
+        cursor: pointer;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        padding: 5px;
+        color: #444;
+        background-color: #fff;
+    }
+
+.is-hide {
+    display: none;
 }

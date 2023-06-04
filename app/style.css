@@ -55,7 +55,7 @@ body {
 .visio-logonav {
 
   color: white;
-  z-index: 999;
+  z-index: 992;
   transition: background-color 200ms ease-in-out;
 }
 
