@@ -5,6 +5,8 @@ import { handleSlide } from "./nav";
 import Particles from "./particles";
 
 
+
+
 export default function LogoComponent(props: { scrolled: any; }) {
   const [scroll, setScroll] = useState(1);
 
@@ -39,8 +41,11 @@ export default function LogoComponent(props: { scrolled: any; }) {
         </div> */}
         <div>
 
-          <h1 className={props.scrolled ? classes + " visio-bg" : classes + " bg-white"}>
-            <button className="duration-200 cursor-pointer" onClick={() => handleSlide('header')}>visioart.io</button>
+        <h1 
+            className={props.scrolled ? classes + " duration-200 cursor-pointer visio-bg" : classes + " bg-white"} 
+            onClick={props.scrolled ? () => handleSlide('header') : undefined}
+          >
+            visioart.io
           </h1>
           <div className="hidden  h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
 

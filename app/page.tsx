@@ -28,8 +28,10 @@ export default function Home() {
 
 
   const [style, setStyle] = useState({ opacity: 1, transform: "scale(1)" });
+  const [hideLogo, setHideLogo] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const navLogo = document.getElementById("logo-nav");
     const handleScroll = () => {
       const scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
@@ -58,6 +60,15 @@ export default function Home() {
 
 
     window.addEventListener("scroll", handleScroll);
+    // window.onbeforeunload = () => {
+    //   const logo = document.getElementById("logo-nav");
+    //   if(logo) {
+    //     setHideLogo(true);
+    //     logo.hidden = true;
+    //   }
+    //   window.scrollTo(0, 0);
+
+    // }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -67,7 +78,7 @@ export default function Home() {
     <div className="main">
 
       <div className="navbar-fixed-top">
-        <Navigation />
+        { !hideLogo ? <Navigation /> : null}
       </div >
 
       {/* <div className="footer-fixed-bottom">

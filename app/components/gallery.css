@@ -35,6 +35,11 @@ body {
 
 .x.mandatory-scroll-snapping {
     scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.x.mandatory-scroll-snapping::-webkit-scrollbar {
+    display: none;
 }
 
 .visio-container>div {
