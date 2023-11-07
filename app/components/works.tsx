@@ -8,7 +8,7 @@ import { X } from 'lucide-react';
 const Works = () => {
     // Array of Vimeo video IDs
     const vimeoIds = [
-        '832050120', '254514255', '290177185', '150389663', '105701629', '332331153'
+        '875195473', '254514255', '290177185', '150389663', '105701629', '332331153'
     ];
 
     // Array of image filenames
