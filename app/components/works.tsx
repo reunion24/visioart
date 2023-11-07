@@ -8,11 +8,18 @@ import { X } from 'lucide-react';
 const Works = () => {
     // Array of Vimeo video IDs
     const vimeoIds = [
-        '875195473', '254514255', '290177185', '150389663', '105701629', '332331153'
+        '875195473', '881407824', '881399888', '864549337', '881400642', '832050120'
     ];
 
     // Array of image filenames
-    const imageFilenames = ['work1.jpg', 'work2.PNG', 'work3.PNG', 'work4.PNG', 'work5.PNG', 'work6.jpg'];
+    const imageFilenames = [
+        'url(&quot;https://i.vimeocdn.com/video/1739672231-bbd164759f944be764c1275f7d8a1b4b300bcf778eba1b08543a3bb2160209fc-d?mw=1600&mh=900&q=70&quot', 
+        'work2.PNG', 
+        'work3.PNG', 
+        'work4.PNG', 
+        'work5.PNG', 
+        'work6.jpg'
+];
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [currentVideoId, setCurrentVideoId] = useState('');
