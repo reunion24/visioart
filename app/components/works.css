@@ -48,6 +48,7 @@
 
 @font-face {
     font-family: 'FuturaPTMedium';
+    src: url('/public/fonts/Futura\ PT\ Medium.ttf') format('ttf');
     src: url('/public/fonts/FuturaPTMedium.otf') format('otf'); /* Adjust the path as necessary */
     font-weight: normal;
     font-style: normal;
