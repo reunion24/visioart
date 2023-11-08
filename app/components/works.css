@@ -42,13 +42,13 @@
     color: white;
     opacity: 0;
     transition: opacity 0.3s ease-out;
-    font-family: 'FuturaPTMedium' !important;
+    font-family: 'FuturaPT' !important;
 
 }
 
 @font-face {
-    font-family: 'FuturaPTMedium';
-    src: url('/public/fonts/Futura\ PT\ Medium.ttf') format('ttf');
+    font-family: 'FuturaPT';
+    src: url('/public/fonts/FuturaPTMedium.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
