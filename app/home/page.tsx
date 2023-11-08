@@ -1,12 +1,12 @@
 import React from "react";
-import Works from "../components/works";
+import Gallery from "../components/gallery";
 
 import './style.css';
 
 export default function Home() {
   return (
   <div className="colorthing">
-    <Works />
+    <Gallery />
       </div>
   );
 }
