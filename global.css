@@ -9,6 +9,7 @@
 }
 
 @font-face {
+
   font-family: 'Inter';
   src: url('/path/to/your/font/Inter-Regular.woff2') format('woff2'),
     url('/path/to/your/font/Inter-Regular.woff') format('woff');
@@ -16,6 +17,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 
 
 body {
