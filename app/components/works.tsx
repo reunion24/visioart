@@ -12,14 +12,8 @@ const Works = () => {
     ];
 
     // Array of image filenames
-    const imageFilenames = [
-        'url(&quot;https://i.vimeocdn.com/video/1739672231-bbd164759f944be764c1275f7d8a1b4b300bcf778eba1b08543a3bb2160209fc-d?mw=1600&mh=900&q=70&quot', 
-        'work2.PNG', 
-        'work3.PNG', 
-        'work4.PNG', 
-        'work5.PNG', 
-        'work6.jpg'
-];
+   
+
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [currentVideoId, setCurrentVideoId] = useState('');

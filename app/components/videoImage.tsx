@@ -47,6 +47,7 @@ function VideoImage(props: VideoImageProps) {
                 >
                     <div className="video-overlay">
                         <span className='video-link' style={{
+                            // fontFamily: "FuturaPT",
                            // fontWeight: 'bold',
                             whiteSpace:"pre-line"
                             }}
