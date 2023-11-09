@@ -9,7 +9,6 @@ import { useClient } from "./components/useClient";
 import { allProjects } from "contentlayer/generated";
 import { Card } from "./components/card";
 import { Eye } from "lucide-react";
-import Slides from "./components/slides";
 import Slide from "./components/scroll2slide";
 import './style.css';
 
