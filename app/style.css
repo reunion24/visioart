@@ -209,3 +209,58 @@ p {
   vertical-align: middle;
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+  .footer-fixed-bottom {
+    height: 10vh;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .page4, .container2, .my-16, .contact {
+    align-items: center !important;
+
+
+  }
+
+
+}
+
+/* Media query for phone devices (landscape) */
+@media (max-width: 576px) {
+   .footer-fixed-bottom {
+    height: 8vh;
+  }
+
+ 
+  p {
+    font-size: 16px;
+  }
+
+  .page4, .container2, .my-16, .contact {
+    align-items: center !important;
+
+
+  }
+}
+
+/* Media query for phone devices (portrait) */
+@media (max-width: 360px) {
+.footer-fixed-bottom {
+    height: 7vh;
+  }
+
+
+  p {
+    font-size: 14px;
+  }
+  .page4, .container2, .my-16, .contact {
+    align-items: center !important;
+
+
+  }
+  
+}
+

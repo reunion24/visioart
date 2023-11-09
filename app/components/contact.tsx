@@ -1,5 +1,5 @@
 "use client";
-import { Instagram, Youtube, Mail } from "lucide-react";
+import { Instagram, Tv, Mail } from "lucide-react";
 import Link from "next/link";
 import { Card } from "./card";
 
@@ -17,10 +17,10 @@ const socials = [
 		handle: "adam@visioart.io",
 	},
 	{
-		icon: <Youtube size={20} />,
+		icon: <Tv size={20} />,
 		href: "https://www.youtube.com/channel/UCYPh0TPIcljdsNYJiMMWtPA",
-		label: "Youtube",
-		handle: "visioart.io",
+		label: "Vimeo",
+		handle: "visioart",
 	},
 ];
 
@@ -28,8 +28,9 @@ export default function Contact() {
 	return (
 		<div  className="from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			{/* <Navigation /> */}
+			<div className="contact">
 			<div className="container2 flex items-center justify-center min-h-screen px-4 mx-auto">
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-16">
+				<div className="grid w-full grid-cols-1 gap-8 mx-auto sm:mt-0 sm:grid-cols-3 lg:gap-16">
 					{socials.map((s) => (
 						<Card>
 							<Link
@@ -56,6 +57,7 @@ export default function Contact() {
 						</Card>
 					))}
 				</div>
+			</div>
 			</div>
 		</div>
 	);

@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import './works.css';
 import VideoImage from './videoImage';
 import { X } from 'lucide-react';
+import { Item } from './gallery';
 
 
-const Works = () => {
+
+const Works = ({ items }: { items: Item[] }) => {
     // Array of Vimeo video IDs
     const vimeoIds = [
         '875195473', '881407824', '881399888', '864549337', '881400642', '832050120'
