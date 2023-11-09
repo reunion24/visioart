@@ -2,41 +2,35 @@
 import React, {useState} from 'react';
 import Link from 'next/link';
 import { AlignJustify } from 'lucide-react';
-import Footer from '../components/footer';
 import './style.css';
 
 const Home = () => {
 
 
-  const myFunction = () => {
-    const x = document.getElementById("myTopnav");
-    // Check that 'x' is not null before accessing its properties
-    if (x) {
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
+  const [isActive, setIsActive] = useState(false);
+
+  const toggleNav = () => {
+    setIsActive(!isActive);
   };
+
   
 
   return (
       <>
-        <div className="topnav" id="myTopnav">
+      <div className={`topnav ${isActive ? 'responsive' : ''}`} id="myTopnav">
+        
           <Link href="#home">
             <span className="active">
               Home
             </span>
           </Link> 
-          <Link href="#news">News</Link>
-          <Link href="#contact">Contact</Link>
-          <Link href="#about">About</Link>
-          {/* Update the onClick to call the myFunction method */}
-          <Link href="#/"><span className="icon" onClick={myFunction}>
-          <AlignJustify />
-            </span>
-          </Link>
+          <Link href="#news"><span>News</span></Link>
+          <Link href="#contact"><span>Contact</span></Link>
+          <Link href="#about"><span>About</span></Link>
+          <button className="icon" onClick={toggleNav}>
+          <span>          <AlignJustify />
+</span>
+        </button>
           
         </div>
   
