@@ -1,0 +1,31 @@
+/* This is your default grid setup for desktops */
+.grid-container {
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    /* gap: 16px;  */
+    color: bisque;
+    width: 100vw;
+    align-items: center;
+  }
+  .grid-item {
+    size: 100px;
+    border: 1px solid white;
+    background: blue;
+
+
+  }
+  
+  /* This media query targets screens with a max width of 600px, typical for mobile devices */
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr); /* 1 column */
+    }
+
+    .grid-container > div:nth-child(n+4) {
+        display: none;
+      }
+    
+  }
+  

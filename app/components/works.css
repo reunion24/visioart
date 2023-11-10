@@ -21,6 +21,10 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .works-videos > div:nth-child(n+4) {
+        display: none;
+      }
+
     }
   
 
