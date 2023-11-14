@@ -1,5 +1,5 @@
 import React from 'react';
-import './works.css';
+import './videoimage.css';
 
 type VideoImageProps = {
     item: {
