@@ -79,6 +79,9 @@
     height: 100%;
     text-align: center;
     overflow: hidden;
+ 
+    /* transform: scale(1.06); */
+      
 }
 
 .video-image:hover {

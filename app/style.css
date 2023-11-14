@@ -224,7 +224,9 @@ p {
 
 
   }
-
+.navbar-rest {
+  display: none;
+}
 
 }
 

@@ -44,6 +44,7 @@ const Navigation = () => {
       </div>
       <div className={`fixed inset-x-0 z-999`}>
         <div className="container animate-fade-in flex flex-row-reverse items-center justify-between p-6 mx-auto">
+          <div className="navbar-rest">
           <div className="flex justify-between gap-8">
             <button className="duration-200 cursor-pointer" onClick={() => handleSlide('works')}>
               WORKS
@@ -54,6 +55,7 @@ const Navigation = () => {
             <button className="duration-200 cursor-pointer" onClick={() => handleSlide('contact')}>
               CONTACT
             </button>
+          </div>
           </div>
         </div>
       </div>
