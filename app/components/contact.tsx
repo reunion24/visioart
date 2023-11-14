@@ -2,6 +2,7 @@
 import { Instagram, Tv, Mail } from "lucide-react";
 import Link from "next/link";
 import { Card } from "./card";
+import '../style.css';
 
 const socials = [
 	{
@@ -27,7 +28,6 @@ const socials = [
 export default function Contact() {
 	return (
 		<div  className="from-zinc-900/0 via-zinc-900 to-zinc-900/0">
-			{/* <Navigation /> */}
 			<div className="contact">
 			<div className="container2 flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto sm:mt-0 sm:grid-cols-3 lg:gap-16">
@@ -47,7 +47,9 @@ export default function Contact() {
 								</span>{" "}
 								<div className="z-10 flex flex-col items-center">
 									<span className="text-xl font-medium duration-150 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
+										<div className="contact-handle">
 										{s.handle}
+										</div>
 									</span>
 									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
 										{s.label}

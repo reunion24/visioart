@@ -3,6 +3,7 @@ body {
   padding: 0;
 }
 
+
 .main {
   display: flex;
   flex-direction: column;
@@ -33,7 +34,7 @@ body {
 
 .navbar-fixed-top.scrolled {
   background-color: black;
-  color: #858585;
+  color: #ffffff;
 }
 
 #logo-nav {
@@ -91,7 +92,12 @@ body {
   z-index: 999;
 }
 
-.cursor-pointer:hover {
+.navbar-rest .cursor-pointer:hover {
+  color: #858585;
+}
+
+
+.visio-logonav .cursor-pointer:hover {
   color: black;
 }
 
@@ -231,38 +237,63 @@ p {
 }
 
 /* Media query for phone devices (landscape) */
-@media (max-width: 576px) {
-   .footer-fixed-bottom {
-    height: 8vh;
+@media only screen and (max-width: 576px) {
+  /* Adjustments for landscape orientation */
+  .navbar-fixed-top {
+    height: 10vh; /* Adjust navbar height for better visibility */
+  }
+  .page2, .page3, .page4 {
+
+  height: 90vh;
+ }
+
+  section {
+  scroll-margin-top: 10vh;
+  }
+  .contact-handle {
+font-size: 1em;
   }
 
- 
+
   p {
-    font-size: 16px;
+    font-size: 16px; /* Adjust font size for better readability */
   }
 
-  .page4, .container2, .my-16, .contact {
-    align-items: center !important;
-
-
-  }
+  /* Other adjustments for landscape orientation */
+  /* ... */
 }
 
 /* Media query for phone devices (portrait) */
-@media (max-width: 360px) {
-.footer-fixed-bottom {
-    height: 7vh;
+@media only screen and (max-width: 360px) {
+  /* Adjustments for portrait orientation */
+  .navbar-fixed-top {
+    height: 8vh; /* Adjust navbar height for better visibility */
   }
+  .page2, .page3, .page4 {
 
+    height: 92vh;
+   }
+  
+    section {
+    scroll-margin-top: 8vh;
+  }
 
   p {
-    font-size: 14px;
+    font-size: 14px; /* Adjust font size for better readability */
   }
-  .page4, .container2, .my-16, .contact {
-    align-items: center !important;
 
+  /* Other adjustments for portrait orientation */
+  /* ... */
+}
 
-  }
-  
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+  /* Specific adjustments for newer iPhone models in portrait */
+  /* ... */
+}
+
+/* iPhone X, XS, 11 Pro, 12 Mini, and 13 Mini (landscape) */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  /* Specific adjustments for newer iPhone models in landscape */
+  /* ... */
 }
 
