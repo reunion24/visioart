@@ -163,3 +163,135 @@
 .is-hide {
     display: none;
 }
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .holster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .visio-container {
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    scroll-snap-type: x mandatory;
+  }
+  
+  /* Assuming that .slide in Home component is equivalent to .works-videos */
+  .visio-container .slide {
+    flex: none;
+    width: 100%; /* Each slide takes full width of the container */
+    height: 86vh; /* Adjust height as needed */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+    grid-gap: 0;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    scroll-snap-align: start;
+  }
+  
+  /* Styles for items inside each slide */
+  .slide .item {
+    background-color: red; /* Example item background color */
+    color: white; /* Example item text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    position: relative; /* For positioning before content and overlays */
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  /* Before pseudo-element for background image */
+  .item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease-out, filter 0.3s ease-out;
+    z-index: -1;
+  }
+  
+  /* Hover states for items */
+  .item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+  }
+  
+  .item:hover .video-link {
+    opacity: 1;
+  }
+  
+  /* Modal styling */
+  .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup-video {
+    width: 90%;
+    height: 90%;
+    position: relative;
+  }
+  
+  .modal-close {
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 5px;
+    color: #ffffff;
+    background-color: transparent;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (min-width: 601px) {
+    .visio-container .slide {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for desktop */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .visio-container .slide {
+      grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+    }
+    
+    /* Hide additional items on mobile as per original works.css */
+    .slide .item:nth-child(n+4) {
+      display: none;
+    }
+  }
+  
+  /* Hide scrollbar */
+  .visio-container::-webkit-scrollbar {
+    display: none;
+  }
+  .visio-container {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }

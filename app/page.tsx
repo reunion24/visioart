@@ -119,7 +119,7 @@ export default function Home() {
 
         <section id="works" className="page2">
 
-          <Gallery />
+          <Works />
 
           {/* <Carousrel /> */}
 
