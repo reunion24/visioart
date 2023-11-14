@@ -18,7 +18,6 @@ import Contact from "./components/contact";
 import AboutUs from "./components/about";
 import Works from "./components/works";
 import { Link } from 'react-scroll';
-import Gallery from "./components/gallery";
 
 
 
