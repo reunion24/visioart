@@ -55,12 +55,7 @@ const Works = ({ items }: { items: Item[] }) => {
         <div className="works-section">
             <div className="works-videos">
                 {vimeoIds.map((id, index) => (
-                    <VideoImage 
-                        key={index} 
-                        index={index} 
-                        id={id} 
-                        handleStartButtonClick={() => handleStartButtonClick(id)}
-                    />
+                    <div></div>
                 ))}
             </div>
             {isModalVisible && (
