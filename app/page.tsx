@@ -22,6 +22,8 @@ import { Link } from 'react-scroll';
 
 
 export default function Home() {
+  const viewportHeight = useViewportHeight();
+
 
 
 
@@ -85,46 +87,22 @@ export default function Home() {
 
       <div className="slides">
 
-        <section id="header" className="page1">
+        <section id="header" className="page1" style={{ height: `${viewportHeight}px` }}>
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
 
             <div className="flex flex-col items-center justify-center h-full">
-              {/* <div className="absolute inset-0 -z-10">
-                <Particles className="h-full w-full animate-fade-in" quantity={100} />
-              </div> */}
-              {/* <div style={style} id="banner-logo-wrapper">
-                <h1 className="z-10
-               text-4xl 
-               text-transparent 
-               duration-1000 
-               bg-white 
-               justify-end 
-               cursor-default 
-               text-edge-outline 
-               animate-title 
-               font-display 
-               sm:text-6xl 
-               md:text-9xl 
-               whitespace-nowrap 
-               bg-clip-text">
-                  visioart.io
-                </h1>
-              </div> */}
-              {/* <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" /> */}
             </div>
           </div>
 
         </section>
 
-        <section id="works" className="page2">
+        <section id="works" className="page2" style={{ height: `0.86*${viewportHeight}px` }}>
 
           <Works />
 
-          {/* <Carousrel /> */}
-
         </section>
 
-        <section id="about" className="page3">
+        <section id="about" className="page3" style={{ height: `0.86*${viewportHeight}px` }}>
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
             <div className="my-16 text-center animate-fade-in">
               <div className="w-3/4 mx-auto text-white">
@@ -134,12 +112,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contact" className="page4">
+        <section id="contact" className="page4" style={{ height: `0.86*${viewportHeight}px` }}>
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
             <div className="my-16 text-center animate-fade-in">
               <div className="w-3/4 mx-auto text-white">
                 <Contact />
-                 {/* <Works /> */}
               </div>
             </div>
           </div>
@@ -154,3 +131,27 @@ export default function Home() {
   );
 };
 
+function useViewportHeight() {
+  // Initialize state with undefined, so it doesn't break server-side rendering
+  const [viewportHeight, setViewportHeight] = useState(typeof window !== 'undefined' ? window.innerHeight : undefined);
+
+  useEffect(() => {
+    // Ensure window is defined
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setViewportHeight(window.innerHeight);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Set the initial height
+      handleResize();
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
+
+  return viewportHeight;
+}

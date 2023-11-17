@@ -37,7 +37,6 @@ body {
   
   /* Styles for items inside each slide */
   .slide .item {
-    background-color: red; /* Example item background color */
     color: white; /* Example item text color */
     display: flex;
     align-items: center;
