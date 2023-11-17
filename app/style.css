@@ -158,7 +158,7 @@ section {
 
 .page3 {
   bottom: 0%;
-  height: 86vh;
+  /* height: 86vh; */
   width: 100%;
   background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto4.jpeg);
   background-blend-mode: darken;
@@ -181,7 +181,7 @@ section {
 
 .page4 {
   bottom: 0%;
-  height: 86vh;
+  /* height: 86vh; */
   width: 100%;
   background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto2.jpeg);
   background-blend-mode: darken;
@@ -240,9 +240,9 @@ p {
 /* Media query for phone devices (landscape) */
 @media only screen and (max-width: 576px) {
   /* Adjustments for landscape orientation */
-  .navbar-fixed-top {
-    height: 10vh; /* Adjust navbar height for better visibility */
-  }
+  /* .navbar-fixed-top {
+    height: 10vh; 
+   }
   .page2, .page3, .page4 {
 
   height: 90vh;
@@ -250,7 +250,7 @@ p {
 
   section {
   scroll-margin-top: 10vh;
-  }
+  } */
   .contact-handle {
 font-size: 1em;
   }
@@ -267,8 +267,8 @@ font-size: 1em;
 /* Media query for phone devices (portrait) */
 @media only screen and (max-width: 360px) {
   /* Adjustments for portrait orientation */
-  .navbar-fixed-top {
-    height: 8vh; /* Adjust navbar height for better visibility */
+  /* .navbar-fixed-top {
+    height: 8vh; 
   }
   .page2, .page3, .page4 {
 
@@ -277,7 +277,7 @@ font-size: 1em;
   
     section {
     scroll-margin-top: 8vh;
-  }
+  } */
 
   p {
     font-size: 14px; /* Adjust font size for better readability */
