@@ -27,7 +27,7 @@ body {
   .visio-container .slide {
     flex: none;
     width: 100%; /* Each slide takes full width of the container */
-    height: 86vh; /* Adjust height as needed */
+    height: 100%; /* Adjust height as needed */
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
     grid-gap: 0;

@@ -87,8 +87,9 @@ export default function Home() {
 
       <div className="slides">
 
-        <section id="header" className="page1" style={{ height: `${viewportHeight}px` }}>
-          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+        <section id="header" className="page1" style={{ height: `0.86*${viewportHeight}px` }}>
+          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative" 
+          >
 
             <div className="flex flex-col items-center justify-center h-full">
             </div>
@@ -97,13 +98,14 @@ export default function Home() {
         </section>
 
         <section id="works" className="page2" style={{ height: `0.86*${viewportHeight}px` }}>
-
+        <div className="flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
           <Works />
-
+          </div>
         </section>
 
         <section id="about" className="page3" style={{ height: `0.86*${viewportHeight}px` }}>
-          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
+          >
             <div className="my-16 text-center animate-fade-in">
               <div className="w-3/4 mx-auto text-white">
                 <AboutUs />
@@ -113,7 +115,9 @@ export default function Home() {
         </section>
 
         <section id="contact" className="page4" style={{ height: `0.86*${viewportHeight}px` }}>
-          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+          <div className="flex flex-col items-center justify-center w-screen h-screen
+          overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
+          >
             <div className="my-16 text-center animate-fade-in">
               <div className="w-3/4 mx-auto text-white">
                 <Contact />

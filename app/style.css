@@ -118,7 +118,7 @@ section {
 }
 
 .page1 {
-  /* height: 100vh; */
+  height: 100vh;
   width: 100%;
   color: rgb(255, 255, 255);
   background: rgba(56, 56, 56, 0.7) url(/bg_photos/bgphoto1.jpeg);
@@ -141,7 +141,7 @@ section {
 
 .page2 {
   position: relative;
-  /* height: 86vh; */
+  height: 86vh;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -158,7 +158,7 @@ section {
 
 .page3 {
   bottom: 0%;
-  /* height: 86vh; */
+  height: 86vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto4.jpeg);
   background-blend-mode: darken;
@@ -181,7 +181,7 @@ section {
 
 .page4 {
   bottom: 0%;
-  /* height: 86vh; */
+  height: 86vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto2.jpeg);
   background-blend-mode: darken;
