@@ -298,3 +298,9 @@ font-size: 1em;
   /* ... */
 }
 
+
+@media all and (display-mode: standalone) {
+  body {
+    padding: 10px;
+  }
+}
