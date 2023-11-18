@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 // import Link from 'next/link';
 
 import Navigation from "./components/nav";
-import Footer from "./components/footer";
 import { useClient } from "./components/useClient";
 import { allProjects } from "contentlayer/generated";
 import { Card } from "./components/card";
