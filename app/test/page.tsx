@@ -18,9 +18,9 @@ const Home = () => {
     </div>
     <div className="visio-container x mandatory-scroll-snapping" dir="ltr">
       <div className="box">1</div>
-      <div className="box">2</div>
-      <div className="box">3</div>
-      <div className="box">4</div>
+      <div id="works" className="box">2</div>
+      <div id="about" className="box">3</div>
+      <div id="contact" className="box">4</div>
       </div>
       </div>
 
