@@ -19,6 +19,11 @@ body {
   transition: background-color 200ms ease-in-out;
 }
 
+.visio-logonav
+{
+  display: none;
+}
+
 .holster {
   display: flex;
   align-items: center;
