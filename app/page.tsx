@@ -87,7 +87,7 @@ export default function Home() {
 
       <div className="slides">
 
-        <section id="header" className="page1" style={{ height: `0.86*${viewportHeight}px` }}>
+        <section id="header" className="page1" style={{ height: `${viewportHeight}px` }}>
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative" 
           >
 

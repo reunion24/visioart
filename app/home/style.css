@@ -26,6 +26,7 @@ body {
   scroll-snap-type: y mandatory; /* Changed to y axis */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  scroll-margin-top: 14vh;
 }
 
 .mandatory-scroll-snapping::-webkit-scrollbar {
@@ -39,6 +40,11 @@ body {
   width: 100%; /* Full width */
   height: 86vh; /* Adjust height as needed */
 }
+
+.gallery-container > div:first-child {
+  height: 100vh; /* Adjust height as needed */
+}
+
 
 .gallery-container > div:nth-child(even) {
   background-color: #87ea87;
@@ -156,12 +162,12 @@ body {
   font-family: 'Inter', sans-serif;
 
 }
-
+/* 
 section {
   scroll-snap-align: start;
   scroll-margin-top: 14vh;
   scroll-snap-stop: always;
-}
+} */
 
 .page1 {
   height: 100vh;

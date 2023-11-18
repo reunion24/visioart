@@ -68,20 +68,16 @@ export default function Home() {
 
   return (
     <div className="main">
-
+<div className="navbar-fixed-top">
+        {/* { !hideLogo ? <Navigation /> : null} */}
+      </div >
 
     <div className="holster">
     <div className="slides">
     <div className="gallery-container x mandatory-scroll-snapping" dir="ltr">
       <div>
-      <div className="navbar-fixed-top">
-        { !hideLogo ? <Navigation /> : null}
-      </div >
-
-      {/* <div className="footer-fixed-bottom">
-        <Footer />
-      </div> */}
-      <section id="header" className="page1" style={{ height: `0.86*${viewportHeight}px` }}>
+      
+      <section id="header" className="page1" style={{ height: `${viewportHeight}px` }}>
           <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative" 
           >
 
