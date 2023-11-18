@@ -8,13 +8,36 @@ import Navigation from '../components/nav';
 
 
 const Home = () => {
- 
+
+
+  const [isBlackNavbar, setIsBlackNavbar] = useState(false);
+
+  const checkScroll = () => {
+    const scrollPosition = window.scrollY;
+    const triggerHeight = window.innerHeight * 0.86; 
+    setIsBlackNavbar(scrollPosition >= triggerHeight);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+
+    return () => {
+      window.removeEventListener("scroll", checkScroll);
+    };
+  }, []);
+
+
+
+
+
+
 
   return (
 
     
     <div className="holster">
-      <div className="navbar2"> <Navigation />
+      <div className={`navbar2 ${isBlackNavbar ? "black-navbar" : ""}`}>
+         <Navigation />
     </div>
     <div className="visio-container x mandatory-scroll-snapping" dir="ltr">
       <div className="box">1</div>

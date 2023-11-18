@@ -19,6 +19,10 @@ body {
   transition: background-color 200ms ease-in-out;
 }
 
+.black-navbar {
+  background-color: black;
+}
+
 .visio-logonav
 {
   display: none;
