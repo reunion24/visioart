@@ -328,19 +328,7 @@ font-size: 1em;
 }
 
 
-@media all and (display-mode: minimal-ui ) {
-  body {
-    height: 85vh;
-  }
-}
-
-@media all and (display-mode: standalone ) {
-  body {
-    height: 85vh;
-  }
-}
-
-@media all and (display-mode: fullscreen ) {
+@media only screen and (max-width: 360px) and (display-mode: minimal-ui ) and (display-mode: standalone ) and (display-mode: fullscreen ) {
   body {
     height: 85vh;
   }
