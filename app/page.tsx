@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState, useEffect } from "react";
-// import Link from 'next/link';
+import React, { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
 
 import Navigation from "./components/nav";
 import { useClient } from "./components/useClient";
@@ -16,11 +16,35 @@ import Particles from "./components/particles";
 import Contact from "./components/contact";
 import AboutUs from "./components/about";
 import Works from "./components/works";
-import { Link } from 'react-scroll';
 
 
 
-export default function Home() {
+export default function Home () {
+  const childRef = useRef<HTMLDivElement>(null);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+   if (childRef.current) {
+     const currentPosition = childRef.current.scrollTop;
+     setScrollPosition(currentPosition);
+     console.log('Scroll position:', currentPosition);
+   }
+ };
+
+ useEffect(() => {
+   const childElement = childRef.current;
+   if (childElement) {
+     childElement.addEventListener('scroll', handleScroll);
+
+     // Cleanup
+     return () => {
+       childElement.removeEventListener('scroll', handleScroll);
+     };
+   }
+ }, []);
+
+
+
+
   const viewportHeight = useViewportHeight();
 
 
@@ -59,15 +83,6 @@ export default function Home() {
 
 
     window.addEventListener("scroll", handleScroll);
-    // window.onbeforeunload = () => {
-    //   const logo = document.getElementById("logo-nav");
-    //   if(logo) {
-    //     setHideLogo(true);
-    //     logo.hidden = true;
-    //   }
-    //   window.scrollTo(0, 0);
-
-    // }
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -77,53 +92,59 @@ export default function Home() {
     <div className="main">
 
       <div className="navbar-fixed-top">
-        { !hideLogo ? <Navigation /> : null}
+        { !hideLogo ? <Navigation childRef={ childRef }/> : null}
       </div >
 
       {/* <div className="footer-fixed-bottom">
         <Footer />
       </div> */}
 
-      <div className="slides">
+      <div ref={childRef} className="main-container x main-mandatory-scroll-snapping">
+        <div className="box">
+          <div id="header" className="page1" style={{ height: `${viewportHeight}px` }}>
+            <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative" 
+            >
 
-        <section id="header" className="page1" style={{ height: `${viewportHeight}px` }}>
-          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative" 
-          >
-
-            <div className="flex flex-col items-center justify-center h-full">
-            </div>
-          </div>
-
-        </section>
-
-        <section id="works" className="page2" style={{ height: `0.86*${viewportHeight}px` }}>
-        <div className="flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
-          <Works />
-          </div>
-        </section>
-
-        <section id="about" className="page3" style={{ height: `0.86*${viewportHeight}px` }}>
-          <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
-          >
-            <div className="my-16 text-center animate-fade-in">
-              <div className="w-3/4 mx-auto text-white">
-                <AboutUs />
+              <div className="flex flex-col items-center justify-center h-full">
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section id="contact" className="page4" style={{ height: `0.86*${viewportHeight}px` }}>
-          <div className="flex flex-col items-center justify-center w-screen h-screen
-          overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
-          >
-            <div className="my-16 text-center animate-fade-in">
-              <div className="w-3/4 mx-auto text-white">
-                <Contact />
+        <div className="box">
+          <div id="works" className="page2" style={{ height: `0.86*${viewportHeight}px` }}>
+            <div className="flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+              <Works />
+            </div>
+          </div>
+        </div>
+
+        <div className="box">
+          <div id="about" className="page3" style={{ height: `0.86*${viewportHeight}px` }}>
+            <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
+            >
+              <div className="my-16 text-center animate-fade-in">
+                <div className="w-3/4 mx-auto text-white">
+                  <AboutUs />
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+
+        <div className="box">
+          <div id="contact" className="page4" style={{ height: `0.86*${viewportHeight}px` }}>
+            <div className="flex flex-col items-center justify-center w-screen h-screen
+            overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
+            >
+              <div className="my-16 text-center animate-fade-in">
+                <div className="w-3/4 mx-auto text-white">
+                  <Contact />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         
 
 

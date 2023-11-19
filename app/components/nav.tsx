@@ -13,25 +13,33 @@ const handleSlide = (slideId: string) => {
 };
 
 
-const Navigation = () => {
+const Navigation = (props: {childRef: React.RefObject<HTMLDivElement>}) => {
   const [scrolled, setScrolled] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (props.childRef.current) {
+
+      const scrollHeight = props.childRef.current.scrollHeight - props.childRef.current.clientHeight;
+      const scrollTop = props.childRef.current.scrollTop;
       const progress = (scrollTop / scrollHeight) * 100;
-      const isScrolled = scrollTop > window.innerHeight * 0.86; // Change the value here
+      const isScrolled = scrollTop > props.childRef.current.clientHeight * 0.86; // Change the value here
       setScrolled(isScrolled);
       setScrollProgress(progress);
+      }
     };
 
 
-    window.addEventListener('scroll', handleScroll);
+    if (props.childRef.current) {
 
+    props.childRef.current.addEventListener('scroll', handleScroll);
+    }
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (props.childRef.current) {
+
+        props.childRef.current.removeEventListener('scroll', handleScroll);
+      }
     };
   }, []);
 
@@ -40,7 +48,7 @@ const Navigation = () => {
   return (
     <header className={`navbar-fixed-top  ${scrolled ? 'scrolled' : ''}`}>
       <div className="visio-logonav">
-        <LogoComponent scrolled={ scrolled } />
+        <LogoComponent scrolled={ scrolled } childRef={ props.childRef }/>
       </div>
       <div className={`fixed inset-x-0 z-999`}>
         <div className="container animate-fade-in flex flex-row-reverse items-center justify-between p-6 mx-auto">

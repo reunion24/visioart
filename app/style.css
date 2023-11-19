@@ -1,14 +1,79 @@
 body {
   margin: 0;
   padding: 0;
+  position: fixed;
 }
+
 
 
 .main {
   display: flex;
-  flex-direction: column;
-  /* height: 100vh; */
+  align-items: center;
+  justify-content: center; 
+  flex-flow: column;
+  width: 100vw;
+  height: 100vh;
 }
+
+.main-container {
+  display: flex;
+  flex-direction: column; /* Changed to column */
+  overflow: auto;
+  flex: none;
+  height: 100vh;
+  width: 100%; /* Ensure full width */
+}
+
+.main-mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory; /* Changed to y axis */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  font-size: 48px;
+  font-family: 'Inter', sans-serif;
+}
+
+.main-mandatory-scroll-snapping::-webkit-scrollbar {
+  display: none;
+}
+
+.main-container::-webkit-scrollbar {
+  display: none;
+}
+
+.main-container > div {
+  text-align: center;
+  scroll-snap-align: start; /* Changed to start for vertical alignment */
+  flex: none;
+  width: 100%; /* Full width */
+  height: 86vh; /* Adjust height as needed */
+  scroll-margin-top: 14vh;
+  scroll-snap-align: start; 
+  scroll-snap-stop: always;
+
+
+}
+
+.main-container > div:first-child {
+  height: 100vh; /* Adjust height as needed */
+  scroll-snap-align: start; /* Changed to start for vertical alignment */
+  scroll-snap-stop: always;
+
+}
+
+.main-container > div:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.main-container > div:nth-child(odd) {
+  background-color: #000000;
+}
+
+.box {
+display: flex;
+
+}
+
+
 
 .navbar-fixed-top {
   width: 100%;
@@ -41,11 +106,11 @@ body {
   position: relative;
 }
 
-/* #logo-nav.scrolled {
+#logo-nav.scrolled {
   scale: 1;
   top: 0px;
   position: relative;
-} */
+}
 
 .visio-bg {
   background-color: white;
@@ -60,33 +125,11 @@ body {
   transition: background-color 200ms ease-in-out;
 }
 
-.footer-fixed-bottom {
-  width: 100%;
-  height: 1vh;
-  background-color: white;
-  color: rgb(255, 255, 255);
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  position: fixed;
-  /* inset: 0; */
-  bottom: 0;
-  z-index: 990;
-  opacity: 0;
-  transition: opacity 200ms ease-in-out;
 
-}
 
-.footer-fixed-bottom:not(.scrolled) {
-  
-  opacity: 0;
 
-}
 
-.footer-fixed-bottom.scrolled {
-  opacity: 1;
 
-}
 
 .cursor-pointer {
   z-index: 999;
@@ -102,20 +145,8 @@ body {
 }
 
 
-.slides {
-  /* flex-grow: 1; */
-  scroll-snap-type: y mandatory;
-  /* padding-top: 10vh !important; */
-  font-size: 48px;
-  font-family: 'Inter', sans-serif;
 
-}
 
-section {
-  scroll-snap-align: start;
-  scroll-margin-top: 14vh;
-  scroll-snap-stop: always;
-}
 
 .page1 {
   height: 100vh;
@@ -218,9 +249,7 @@ p {
 }
 
 @media (max-width: 768px) {
-  .footer-fixed-bottom {
-    height: 10vh;
-  }
+ 
 
   p {
     font-size: 18px;

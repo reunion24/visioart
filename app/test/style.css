@@ -20,15 +20,7 @@ body {
 
 }
 
-.black-navbar {
-  background-color: red;
 
-}
-
-.visio-logonav
-{
-  display: none;
-}
 
 .holster {
   display: flex;
@@ -55,6 +47,10 @@ body {
 }
 
 .mandatory-scroll-snapping::-webkit-scrollbar {
+  display: none;
+}
+
+.visio-container::-webkit-scrollbar {
   display: none;
 }
 

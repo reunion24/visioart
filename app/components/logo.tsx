@@ -7,13 +7,14 @@ import Particles from "./particles";
 
 
 
-export default function LogoComponent(props: { scrolled: any; }) {
+export default function LogoComponent(props: { scrolled: any; childRef: React.RefObject<HTMLDivElement>}) {
   const [scroll, setScroll] = useState(1);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrolled = document.documentElement.scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-      const fastScroll = scrolled * 6;
+      if (props.childRef.current) {
+        const scrolled = props.childRef.current.scrollTop / (props.childRef.current.scrollHeight - props.childRef.current.clientHeight);
+        const fastScroll = scrolled * 6;
 
 
       let newScroll = 0 + fastScroll;
@@ -23,11 +24,17 @@ export default function LogoComponent(props: { scrolled: any; }) {
 
 
       setScroll(1 - newScroll);
+      }
     };
+    if (props.childRef.current) {
 
-    window.addEventListener("scroll", handleScroll);
+    props.childRef.current.addEventListener("scroll", handleScroll);
+    }
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (props.childRef.current) {
+
+      props.childRef.current.removeEventListener("scroll", handleScroll);
+      }
     };
   }, []);
   var classes = "z-999 text-4xl text-transparent duration-1000 justify-end cursor-default text-edge-outline animate-title font-display sm:text-4xl md:text-6xl whitespace-nowrap bg-clip-text"
