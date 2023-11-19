@@ -7,7 +7,7 @@ body {
 .navbar2 {
   width: 100%;
   height: 14vh;
-  background-color: black;
+  background-color: transparent;
   color: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
@@ -16,11 +16,13 @@ body {
   inset: 0;
   top: 0;
   z-index: 880;
-  transition: background-color 200ms ease-in-out !important;
+    transition: background-color 200ms ease-in-out;
+
 }
 
 .black-navbar {
   background-color: red;
+
 }
 
 .visio-logonav

@@ -9,26 +9,39 @@ import Navigation from '../components/nav';
 
 const Home = () => {
   const [isBlackNavbar, setIsBlackNavbar] = useState(false);
-  const page1Ref = useRef(null); // Create a ref for the works div
+  const worksRef = useRef(null);
+  const firstBoxRef = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsBlackNavbar(entry.isIntersecting); // Set state based on whether works div is intersecting
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.target.id === 'works' && entry.isIntersecting) {
+            setIsBlackNavbar(true); // Turn navbar black when #works is intersected
+          } else if (entry.target.className.includes('box') && entry.isIntersecting) {
+            setIsBlackNavbar(false); // Turn navbar red when first box is intersected
+          }
+        });
       },
       {
-        root: null, // null means it uses the viewport
-        threshold: 0.15, // Trigger when at least 10% of the target is visible
+        root: null,
+        threshold: 0.5, // Adjust this threshold as needed
       }
     );
 
-    if (page1Ref.current) {
-      observer.observe(page1Ref.current); // Observe the works div
+    if (worksRef.current) {
+      observer.observe(worksRef.current);
+    }
+    if (firstBoxRef.current) {
+      observer.observe(firstBoxRef.current);
     }
 
     return () => {
-      if (page1Ref.current) {
-        observer.unobserve(page1Ref.current); // Clean up
+      if (worksRef.current) {
+        observer.unobserve(worksRef.current);
+      }
+      if (firstBoxRef.current) {
+        observer.unobserve(firstBoxRef.current);
       }
     };
   }, []);
@@ -45,8 +58,8 @@ const Home = () => {
       <Navigation />
     </div>
     <div className="visio-container x mandatory-scroll-snapping" dir="ltr">
-      <div ref={page1Ref} className="box">1</div>
-      <div id="works" className="box">2</div>
+    <div ref={firstBoxRef} className="box">1</div>
+      <div ref={worksRef} id="works" className="box">2</div>
       <div id="about" className="box">3</div>
       <div id="contact" className="box">4</div>
       </div>
