@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { AlignJustify , X } from 'lucide-react';
 import './style.css';
@@ -8,25 +8,30 @@ import Navigation from '../components/nav';
 
 
 const Home = () => {
-
-
   const [isBlackNavbar, setIsBlackNavbar] = useState(false);
-
-  const checkScroll = () => {
-    const scrollPosition = window.scrollY;
-    const triggerHeight = window.innerHeight * 0.86; 
-    setIsBlackNavbar(scrollPosition >= triggerHeight);
-  };
+  const page1Ref = useRef(null); // Create a ref for the works div
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScroll);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsBlackNavbar(entry.isIntersecting); // Set state based on whether works div is intersecting
+      },
+      {
+        root: null, // null means it uses the viewport
+        threshold: 0.15, // Trigger when at least 10% of the target is visible
+      }
+    );
+
+    if (page1Ref.current) {
+      observer.observe(page1Ref.current); // Observe the works div
+    }
 
     return () => {
-      window.removeEventListener("scroll", checkScroll);
+      if (page1Ref.current) {
+        observer.unobserve(page1Ref.current); // Clean up
+      }
     };
   }, []);
-
-
 
 
 
@@ -37,10 +42,10 @@ const Home = () => {
     
     <div className="holster">
       <div className={`navbar2 ${isBlackNavbar ? "black-navbar" : ""}`}>
-         <Navigation />
+      <Navigation />
     </div>
     <div className="visio-container x mandatory-scroll-snapping" dir="ltr">
-      <div className="box">1</div>
+      <div ref={page1Ref} className="box">1</div>
       <div id="works" className="box">2</div>
       <div id="about" className="box">3</div>
       <div id="contact" className="box">4</div>
