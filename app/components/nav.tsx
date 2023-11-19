@@ -24,7 +24,7 @@ const Navigation = (props: {childRef: React.RefObject<HTMLDivElement>}) => {
       const scrollHeight = props.childRef.current.scrollHeight - props.childRef.current.clientHeight;
       const scrollTop = props.childRef.current.scrollTop;
       const progress = (scrollTop / scrollHeight) * 100;
-      const isScrolled = scrollTop > props.childRef.current.clientHeight * 0.87; // Change the value here
+      const isScrolled = scrollTop > props.childRef.current.clientHeight * 0.85; // Change the value here
       setScrolled(isScrolled);
       setScrollProgress(progress);
       }
