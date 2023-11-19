@@ -328,8 +328,8 @@ font-size: 1em;
 }
 
 
-/* @media all and (display-mode: standalone) {
+@media all and (display-mode: minimal-ui) {
   body {
-    padding: 10px;
+    height: 85vh;
   }
-} */
+}
