@@ -3,6 +3,7 @@ import { Instagram, Tv, Mail } from "lucide-react";
 import Link from "next/link";
 import { Card } from "./card";
 import '../style.css';
+// import { ReactComponent as VimeoIcon } from '/public/vimeo-icon.svg';
 
 const socials = [
 	{
