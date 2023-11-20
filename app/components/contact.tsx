@@ -19,7 +19,7 @@ const socials = [
 	},
 	{
 		icon: <Tv size={20} />,
-		href: "https://www.youtube.com/channel/UCYPh0TPIcljdsNYJiMMWtPA",
+		href: "https://vimeo.com/visioart",
 		label: "Vimeo",
 		handle: "visioart",
 	},
