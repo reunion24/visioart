@@ -226,6 +226,13 @@ display: flex;
   /* Additional styles for the slides */
 }
 
+.card-size {
+
+
+  height: 90%;
+  width: 90%;
+}
+
 p {
   font-size: 24px;
   font-family: 'Inter', sans-serif;

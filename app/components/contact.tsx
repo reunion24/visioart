@@ -28,7 +28,7 @@ const socials = [
 
 export default function Contact() {
 	return (
-		<div  className="from-zinc-900/0 via-zinc-900 to-zinc-900/0">
+		<div  className="card-size from-zinc-900/0 via-zinc-900 to-zinc-900/0">
 			<div className="contact">
 			<div className="container2 flex items-center justify-center min-h-screen px-4 mx-auto">
 				<div className="grid w-full grid-cols-1 gap-8 mx-auto sm:mt-0 sm:grid-cols-3 lg:gap-16">
