@@ -125,12 +125,6 @@ display: flex;
   transition: background-color 200ms ease-in-out;
 }
 
-
-
-
-
-
-
 .cursor-pointer {
   z-index: 999;
 }
@@ -330,6 +324,6 @@ font-size: 1em;
 
 @media only screen and (max-width: 360px) and (display-mode: minimal-ui ) and (display-mode: standalone ) and (display-mode: fullscreen ) {
   body {
-    height: 85vh;
+    height: 86vh;
   }
 }
