@@ -20,6 +20,17 @@
 
 
 
+@font-face {
+
+  font-family: 'UNDERRATED';
+  src: url('/public/fonts/UNDERRATED-UltraBold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
 body {
   font-family: 'Inter', sans-serif;
 

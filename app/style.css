@@ -28,7 +28,7 @@ body {
   scroll-snap-type: y mandatory; /* Changed to y axis */
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  font-size: 48px;
+  font-size: 3.75rem;
   font-family: 'Inter', sans-serif;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .main-container > div {
-  text-align: center;
+  /* text-align: center; */
   scroll-snap-align: start; /* Changed to start for vertical alignment */
   flex: none;
   width: 100%; /* Full width */
@@ -190,12 +190,13 @@ display: flex;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   flex-direction: column;
   display: flex;
   flex-grow: 1;
-  font-family: 'Inter', sans-serif;
+  font-family: 'UNDERRATED', sans-serif;
+  text-transform: uppercase;
   position: relative;
   /* background-color: rgb(219, 255, 127); */
 
@@ -234,26 +235,39 @@ display: flex;
 }
 
 p {
-  font-size: 24px;
-  font-family: 'Inter', sans-serif;
-  align-items: center;
-  justify-items: center;
+  font-size: 16px;
+  font-family: 'UNDERRATED', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  /* align-items: center; */
+  /* justify-items: center; */
   flex-direction: column;
   display: flex;
-  text-align: center;
+  /* text-align: left !important; */
   width: 100%;
   height: 100%;
   /* max-width: 75%; */
   /* padding-left: 25%; */
   vertical-align: middle;
   color: #ffffff;
+  line-height: 2.6;  
+  margin-top: 48px !important;
+
 }
 
 @media (max-width: 768px) {
  
 
+  .main-mandatory-scroll-snapping {
+
+    font-size: 32px;
+  }
   p {
-    font-size: 18px;
+    font-size: 10px;
+    line-height: 2.6;  
+    letter-spacing: 5px;
+    text-align: left !important;  
+    margin-top: 8px !important;
   }
 
   .page4, .container2, .my-16, .contact {
@@ -285,9 +299,8 @@ p {
 font-size: 1em;
   }
 
-
   p {
-    font-size: 16px; /* Adjust font size for better readability */
+    font-size: 8px; /* Adjust font size for better readability */
   }
 
   /* Other adjustments for landscape orientation */
@@ -308,9 +321,16 @@ font-size: 1em;
     section {
     scroll-margin-top: 8vh;
   } */
+  .main-mandatory-scroll-snapping {
 
+    font-size: 32px;
+  }
   p {
-    font-size: 14px; /* Adjust font size for better readability */
+    font-size: 8px;
+    line-height: 2.6;  
+    letter-spacing: 4px;
+    text-align: left !important;  
+    margin-top: 8px !important;
   }
 
   /* Other adjustments for portrait orientation */
@@ -334,3 +354,5 @@ font-size: 1em;
     height: 85vh;
   }
 }
+
+
