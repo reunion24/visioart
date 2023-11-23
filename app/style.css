@@ -236,7 +236,9 @@ display: flex;
 
 p {
   font-size: 16px;
-  font-family: 'UNDERRATED', sans-serif;
+  font-family: 'underrated', sans-serif;
+  font-weight: normal;
+  font-style: normal;
   text-transform: uppercase;
   letter-spacing: 8px;
   /* align-items: center; */

@@ -23,12 +23,24 @@
 @font-face {
 
   font-family: 'UNDERRATED';
-  src: url('/public/fonts/UNDERRATED-UltraBold.otf') format('otf');
+  src: url('/public/fonts/UNDERRATED-UltraBold.otf') format('otf'),
+  url('/public/fonts/UNDERRATED\ Ultra\ Bold.woff2') format('woff2'),
+  url('/public/fonts/UNDERRATED\ Ultra\ Bold.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+
+@font-face {
+  font-family: 'Unison-Pro';
+  src: url('/public/fonts/Unison-Pro-Bold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+
+
+}
 
 
 body {
