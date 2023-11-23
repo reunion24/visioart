@@ -20,7 +20,7 @@ type VideoImageProps = {
                 <button id="js-startbtn" className="video-image" onClick={() => handleStartButtonClick(item.link)}>
                     <div className="video-image"
                         style={{
-                            backgroundImage: `url(https://i.vimeocdn.com/video/${item.picture})`,
+                            backgroundImage: `url(${item.picture})`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat'

@@ -39,9 +39,7 @@ export const Card: React.FC<PropsWithChildren> = ({ children }) => {
 				/>
 			</div>
 
-			<div className="p-2 md:p-4">
         {children}
-      </div>
 		</div>
 	);
 };
