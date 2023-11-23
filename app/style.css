@@ -221,13 +221,18 @@ display: flex;
   flex-direction: column;
   display: flex;
   flex-grow: 1;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Futura', sans-serif;
   position: relative;
   /* background-color: rgb(219, 255, 127); */
 
 
   /* Additional styles for the slides */
 }
+
+/* .contact-handle {
+
+  font-family: 'Futura', sans-serif;
+} */
 
 .card-size {
 
