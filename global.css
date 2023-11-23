@@ -33,13 +33,13 @@
 
 
 @font-face {
-  font-family: 'Unison-Pro';
-  src: url('/public/fonts/Unison-Pro-Bold.otf') format('otf');
+  font-family: 'Unison';
+  src: url('/public/fonts/Unison-Pro-Bold.otf') format('otf'),
+  url('/public/fonts/Unison-Pro-Bold.woff') format('woff'),
+  url('/public/fonts/Unison-Pro-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-
-
 }
 
 
