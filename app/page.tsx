@@ -121,10 +121,10 @@ export default function Home () {
 
         <div className="box">
           <div id="about" className="page3" style={{ height: `0.86*${viewportHeight}px` }}>
-            <div className="flex flex-col  w-screen h-screen overflow-hidden from-black via-zinc-600/20 to-black relative"
+            <div className="flex flex-col  w-screen h-screen overflow-hidden relative"
             >
               <div className="animate-fade-in">
-                <div className="text-white">
+                <div className=" text-white">
                   <AboutUs />
                 </div>
               </div>
@@ -137,8 +137,8 @@ export default function Home () {
             <div className="flex flex-col items-center justify-center w-screen h-screen
             overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative"
             >
-              <div className="my-16 text-center animate-fade-in">
-                <div className="w-3/4 mx-auto text-white">
+              <div className="text-center ">
+                <div className="w-6/7 mx-auto text-white">
                   <Contact />
                 </div>
               </div>
