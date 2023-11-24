@@ -1,25 +1,20 @@
 "use client";
 import React from 'react';
-import '../style.css'
+import './about.css'
 
 const AboutUs = () => {
     return (
-        <div className="about-us-section">
-            <h2 className="about-us-title">About Us</h2>
-            <p className="about-us-description">
-            Visioart is a production  company 
-            and creative collective,
-            
-           developing 
-           a contemporary approach 
-          to production.
-            <br />
-            By enabling direct collaboration between 
-           brands,
-            agencies, 
-            and creators, 
-            we produce diverse outputs across various media formats.
-            </p>
+        <div className="AboutUsSection">
+            <div className="AboutUsContent">
+        <p>VISIOART IS A PRODUCTION COMPANY AND CREATIVE COLLECTIVE, <br />
+         DEVELOPING A CONTEMPORARY APPROACH TO PRODUCTION. <br />
+         BY ENABLING DIRECT COLLABORATION BETWEEN <br />
+         BRANDS, AGENCIES, AND CREATORS, <br />
+         WE PRODUCE DIVERSE OUTPUTS ACROSS <br />
+         VARIOUS MEDIA FORMATS.</p>
+        <h1>ABOUT US</h1>
+
+      </div>
         </div>
     );
 }

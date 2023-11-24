@@ -26,12 +26,12 @@ const titles = [
 const pictures = [
   '/works_covers/BACK_AGAIN_COVER.jpg',
   'https://i.vimeocdn.com/video/1748980023-7f878edef28157bf0b75588bbb6f53b423ea79d20cef6e65c2db0e9f72fb2302-d',
-  'https://i.vimeocdn.com/video/1748969030-97a94d85a4a08f7b0a6eafa06c65f5bafc0e1d7ba4ce445eaa8b3f2f414d3a7f-d',
-  'https://i.vimeocdn.com/video/1724118929-da4c387b9893d3aff49471b060ed42a1d9b3ee200848d6275fd32dfbf372e4de-d',
-  'https://i.vimeocdn.com/video/1748970833-746b5ce2e4544187652b0681b5f40ded3be3f224947732963e41fa89323faed8-d',
-  'https://i.vimeocdn.com/video/1748971656-c560593821160132d29215a747e07db4dfc5ec489b4c2303b2051561e10d7d96-d',
-  'https://i.vimeocdn.com/video/1748973356-449f851630c80f7076696b81b8e7d73c10d91258581ef58a98efd6a098ba2331-d',
-  'https://i.vimeocdn.com/video/1748969714-cf4ffa5beb905f39d388c544570d7d408a305fce05b383413ac21a34f4113bc2-d'
+  '/works_covers/NOTHING_004_COVER.jpg',
+  '/works_covers/LONDON_COVER.jpg',
+  '/works_covers/DREAM_COVER.jpg',
+  '/works_covers/AUTHENTIC_COVER.jpg',
+  '/works_covers/NOTHING_003_COVER.jpg',
+  '/works_covers/COUREUR_COVER.jpg'
 ];
 
 const links = [

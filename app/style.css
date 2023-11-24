@@ -132,6 +132,8 @@ display: flex;
 
 .navbar-rest .cursor-pointer:hover {
   color: #858585;
+  /* text-decoration: underline;
+  padding-bottom: 2px; */
 }
 
 
@@ -183,10 +185,10 @@ display: flex;
 
 
 .page3 {
-  bottom: 0%;
+  /* bottom: 0%; */
   height: 86vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto4.jpeg);
+  background: url(/visioart-about.jpg);
   background-blend-mode: darken;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,7 +199,6 @@ display: flex;
   display: flex;
   flex-grow: 1;
   font-family: 'Futura', sans-serif;
-  font-weight: bold;
   text-transform: uppercase;
   position: relative;
   /* background-color: rgb(219, 255, 127); */
@@ -233,6 +234,13 @@ display: flex;
 
   font-family: 'Futura', sans-serif;
 } */
+.text-white{
+  height: 100%;
+}
+.animate-fade-in {
+
+  height: 100%;
+}
 
 .card-size {
 
@@ -242,35 +250,33 @@ display: flex;
 }
 
 p {
-  font-size: 16px;
+  
+  
+
   font-family: 'Futura';
   text-transform: uppercase;
-  letter-spacing: 8px;
+  /* letter-spacing: 8px; */
   flex-direction: column;
   display: flex;
   width: 100%;
   height: 100%;
-  vertical-align: middle;
-  color: #ffffff;
-  line-height: 2.6;  
-  margin-top: 48px !important;
+  /* vertical-align: middle; */
+  /* line-height: 2.6;   */
+  /* margin-top: 48px !important; */
 
 }
 
 @media (max-width: 768px) {
  
 
-  .main-mandatory-scroll-snapping {
-
-    font-size: 32px;
-  }
-  p {
+  
+  /* p {
     font-size: 10px;
     line-height: 2.6;  
     letter-spacing: 5px;
     text-align: left !important;  
     margin-top: 8px !important;
-  }
+  } */
 
   .page4, .container2, .my-16, .contact {
     align-items: center !important;
@@ -297,13 +303,9 @@ p {
   section {
   scroll-margin-top: 10vh;
   } */
-  .contact-handle {
-font-size: 1em;
-  }
+  
 
-  p {
-    font-size: 8px; /* Adjust font size for better readability */
-  }
+  
 
   /* Other adjustments for landscape orientation */
   /* ... */
@@ -323,17 +325,8 @@ font-size: 1em;
     section {
     scroll-margin-top: 8vh;
   } */
-  .main-mandatory-scroll-snapping {
-
-    font-size: 32px;
-  }
-  p {
-    font-size: 8px;
-    line-height: 2.6;  
-    letter-spacing: 4px;
-    text-align: left !important;  
-    margin-top: 8px !important;
-  }
+  
+  
 
   /* Other adjustments for portrait orientation */
   /* ... */

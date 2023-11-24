@@ -1,0 +1,88 @@
+/* AboutUsSection.css */
+
+.AboutUsSection {
+    height: 100% !important;
+    /* position: relative; */
+    color: white;
+    text-align:center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  .AboutUsContent {
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+  }
+  
+  .AboutUsContent h1 {
+    font-size: 16vw !important; /* Adjust the font size as needed */
+    color: #843241; /* This is the color for the 'ABOUT US' heading */
+    margin-bottom: 15 px !important;
+    line-height: 0.85;
+    letter-spacing: 1.5vw;
+    
+  }
+  
+  .AboutUsContent p {
+    font-size: 1.5vw;
+    letter-spacing: 2px;
+    margin-top: 9vh;
+    line-height: 1.4 !important;
+    text-transform: uppercase;
+    color: #dbd9ce !important; /* This is the color for the paragraph text */
+  }
+  
+
+  @media only screen and (max-width: 1060px) {
+
+    .AboutUsContent h1 {
+        font-size: 15vw !important;
+    }
+
+    /* .AboutUsContent p {
+    height: 100%;
+    } */
+
+
+  }
+
+  @media only screen and (max-width: 835px) {
+
+    .AboutUsContent h1 {
+        font-size: 14vw !important;
+    }
+    .AboutUsContent p {
+
+        font-size: 2vw;
+    }
+
+  }
+
+  @media only screen and (max-width: 690px) {
+
+    .AboutUsContent h1 {
+        font-size: 15vw !important;
+        letter-spacing: 1.5vw;
+        margin-bottom: 10vh !important;
+
+
+    }
+    .AboutUsContent p {
+
+        font-size: 4vw;
+        /* text-align: left; */
+    }
+    .AboutUsSection {
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    }
+   
+    
+  }
