@@ -35,7 +35,9 @@
 @font-face {
   font-family: 'Futura';
   src: url('/public/fonts/FuturaPTMedium.otf') format('otf'),
-  url('/public/fonts/FuturaPTMedium.ttf') format('ttf');
+  url('/public/fonts/FuturaPTMedium.ttf') format('ttf'),
+  url('/public/fonts/FuturaPTMedium.woff') format('woff'),
+  url('/public/fonts/FuturaPTMedium.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

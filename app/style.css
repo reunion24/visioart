@@ -88,7 +88,7 @@ display: flex;
   top: 0;
   z-index: 880;
   transition: background-color 200ms ease-in-out;
-  font-family: 'Futura', 'Helvetica Neue', Helvetico;
+  font-family: 'Futura', sans-serif;
 }
 
 .navbar-fixed-top:not(.scrolled) {
@@ -253,7 +253,7 @@ p {
   
   
 
-  font-family: 'Futura';
+  font-family: 'Futura', sans-serif;
   text-transform: uppercase;
   /* letter-spacing: 8px; */
   flex-direction: column;
