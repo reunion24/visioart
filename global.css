@@ -20,39 +20,6 @@
   font-display: swap;
 } */
 
-
-
-@font-face {
-
-  font-family: 'UNDERRATED';
-  src: url('/public/fonts/UNDERRATED-UltraBold.otf') format('otf'),
-  url('/public/fonts/UNDERRATED\ Ultra\ Bold.woff2') format('woff2'),
-  url('/public/fonts/UNDERRATED\ Ultra\ Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'Futura';
-  src: url('/public/fonts/FuturaPT/FuturaPTMedium.otf') format('otf'),
-        url('/public/fonts/FuturaPTMedium.ttf') format('ttf'),
-        url('/public/fonts/FuturaPT/FuturaPTMedium.eot'),
-        url('/public/fonts/FuturaPT/FuturaPTMedium.eot?#iefix') format('embedded-opentype'),
-        url('/public/fonts/FuturaPT/FuturaPTMedium.svg#futura_ptmedium') format('svg'),
-        url('/public/fonts/FuturaPT/FuturaPTMedium.woff') format('woff'),
-        url('/public/fonts/FuturaPT/FuturaPTMedium.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
-
-
-
-
 body {
   font-family: 'Inter', sans-serif;
 

@@ -29,18 +29,8 @@
     opacity: 0;
     transition: opacity 0.3s ease-out;
     font-size: 18px !important;
-    font-family: 'Futura', 'futura-pt', sans-serif;
-
-    /* font-family: url('/public/fonts/FuturaPTMedium.ttf'); */
+    font-family: 'futura-pt', sans-serif;
 }
-
-/* @font-face {
-    font-family: 'FuturaPT';
-    src: url('/public/fonts/FuturaPTMedium.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 
 .video-container {
     position: relative;

@@ -32,7 +32,7 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   font-size: 3.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'futura-pt', sans-serif;
 }
 
 .main-mandatory-scroll-snapping::-webkit-scrollbar {
@@ -91,7 +91,7 @@ display: flex;
   top: 0;
   z-index: 880;
   transition: background-color 200ms ease-in-out;
-  font-family: 'Futura', 'futura-pt', sans-serif;
+  font-family: 'futura-pt', sans-serif;
 }
 
 .navbar-fixed-top:not(.scrolled) {
@@ -180,7 +180,7 @@ display: flex;
   display: flex;
   flex-grow: 1;
 
-  font-family: 'Futura', 'futura-pt', sans-serif;
+  font-family: 'futura-pt', sans-serif;
   /* Additional styles for the slides */
 }
 
@@ -201,7 +201,7 @@ display: flex;
   flex-direction: column;
   display: flex;
   flex-grow: 1;
-  font-family: 'Futura', 'futura-pt', sans-serif;
+  font-family: 'futura-pt', sans-serif;
   text-transform: uppercase;
   position: relative;
   /* background-color: rgb(219, 255, 127); */
@@ -225,7 +225,7 @@ display: flex;
   flex-direction: column;
   display: flex;
   flex-grow: 1;
-  font-family: 'Futura', 'futura-pt', sans-serif;
+  font-family: 'futura-pt', sans-serif;
   position: relative;
   /* background-color: rgb(219, 255, 127); */
 
@@ -235,7 +235,7 @@ display: flex;
 
 /* .contact-handle {
 
-  font-family: 'Futura', sans-serif;
+  font-family: sans-serif;
 } */
 .text-white{
   height: 100%;
@@ -256,7 +256,7 @@ p {
   
   
 
-  font-family: 'Futura', 'futura-pt', sans-serif;
+  font-family: 'futura-pt', sans-serif;
   text-transform: uppercase;
   /* letter-spacing: 8px; */
   flex-direction: column;
