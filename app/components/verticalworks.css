@@ -78,9 +78,11 @@
 
 /* Navigation Buttons */
 .vworks-gallery-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  top: auto;
+  bottom: -2rem;
+  transform: none;
+  margin: 0 1rem;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(6px);
   color: white;
@@ -98,14 +100,12 @@
 }
 
 .vworks-gallery-nav.left {
-  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .vworks-gallery-nav.right {
-  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -113,6 +113,15 @@
 
 .vworks-gallery-nav.hidden {
   visibility: hidden;
+}
+
+.vworks-gallery-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 3;
 }
 
 /* Cinematic video overlays and hover effects */

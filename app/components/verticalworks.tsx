@@ -109,9 +109,6 @@ const VerticalWorks = () => {
 
   return (
     <div className="vworks-video-wrapper">
-      {showPrev && (
-        <button className="vworks-gallery-nav left" onClick={handlePrev}>←</button>
-      )}
       <div className="vworks-gallery-container" ref={containerRef}>
         <div className="vworks-gallery-track">
           {ObjectItems.map((item, i) => (
@@ -129,9 +126,14 @@ const VerticalWorks = () => {
           ))}
         </div>
       </div>
-      {showNext && (
-        <button className="vworks-gallery-nav right" onClick={handleNext}>→</button>
-      )}
+      <div className="vworks-gallery-nav-wrapper">
+        {showPrev && (
+          <button className="vworks-gallery-nav left" onClick={handlePrev}>←</button>
+        )}
+        {showNext && (
+          <button className="vworks-gallery-nav right" onClick={handleNext}>→</button>
+        )}
+      </div>
     </div>
   );
 };

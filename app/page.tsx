@@ -122,9 +122,7 @@ export default function Home () {
 
           <div className="box">
           <div id="verticalworks" className="page5" style={{ height: `0.86*${viewportHeight}px` }}>
-            <div className="flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
               <VerticalWorks />
-            </div>
           </div>
         </div>
 
