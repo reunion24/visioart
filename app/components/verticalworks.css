@@ -1,0 +1,158 @@
+.vworks-gallery-container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: visible;
+  overflow-y: hidden;
+  position: relative;
+  padding: 3rem 1rem 2rem 1rem;
+  width: calc(100vw - 3rem);
+  margin: 1rem auto 0 auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.vworks-gallery-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 0.5rem;
+  min-width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: visible;
+  overflow-y: visible;
+  position: relative;
+}
+
+.vworks-video-container {
+  flex: 0 0 calc((100% - 2.5rem) / 6); /* 6 items with 0.5rem gap */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-snap-align: start;
+  overflow: visible;
+  z-index: 1;
+  will-change: transform;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  isolation: isolate;
+  margin: 0;
+}
+
+.vworks-video-container:hover {
+  z-index: 99;
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.vworks-iframe-wrapper {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.vworks-iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px 8px 8px 8px;
+}
+
+.vworks-video-title {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: white;
+}
+
+/* Navigation Buttons */
+.vworks-gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.vworks-gallery-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.vworks-gallery-nav.left {
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vworks-gallery-nav.right {
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vworks-gallery-nav.hidden {
+  visibility: hidden;
+}
+
+/* Cinematic video overlays and hover effects */
+.vworks-video-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  z-index: 2;
+  opacity: 0.85;
+  transform: translateY(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.vworks-video-container:hover .vworks-video-overlay {
+  opacity: 0;
+  transform: translateY(0);
+}
+
+.vworks-video-overlay {
+  pointer-events: none;
+}
+
+.vworks-clickable {
+  cursor: pointer;
+}
+.vworks-video-wrapper {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+  margin: 0 0.25rem;
+  flex: 0 0 calc((100% - 5rem) / 6); /* Adjusted total gap to match actual padding/margin */
+}

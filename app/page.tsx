@@ -16,6 +16,7 @@ import Particles from "./components/particles";
 import Contact from "./components/contact";
 import AboutUs from "./components/about";
 import Works from "./components/works";
+import VerticalWorks from "./components/verticalworks";
 
 
 
@@ -115,6 +116,14 @@ export default function Home () {
           <div id="works" className="page2" style={{ height: `0.86*${viewportHeight}px` }}>
             <div className="flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
               <Works />
+            </div>
+          </div>
+        </div>
+
+          <div className="box">
+          <div id="verticalworks" className="page5" style={{ height: `0.86*${viewportHeight}px` }}>
+            <div className="flex flex-col items-center justify-center w-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black relative">
+              <VerticalWorks />
             </div>
           </div>
         </div>
