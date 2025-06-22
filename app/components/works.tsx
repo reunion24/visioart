@@ -15,17 +15,15 @@ interface Item {
 const titles = [
 'Kaycyy & Sign crushes motorist\nBRUISED',
 'Sam Silver, informal. & Babsy.\nWE IN LONDON',
-'PXG SS25 - CAMPAIGN',
 'STORIES THAT STAY - ELKONIN\nM-Gallery',
-
+'STEREOTYPE & GRACE BUKUNMI\nASHRA’A',
 
 'STEREOTYPE & jacob.\nBACK AGAIN',
 'STEREOTYPE & YANGHSI\nMIND / STEAL MY SIGHT',
 'Kaycyy & Sign Crushes Motorist\nSADDEST TRUTH',
 'Kaycyy\nALL IN VEIN',
 
-
-'STEREOTYPE & GRACE BUKUNMI\nASHRA’A',
+'PXG SS25 - CAMPAIGN',
 'Mane Choice x Shenseea - CAMPAIGN',
 'FABRIC TO DIE IN',
 '...backagain.backagain...'
@@ -34,8 +32,7 @@ const titles = [
 const pictures = [
   '/works_covers/001-BRUISED-cover-web.jpg',  
   '/works_covers/002-WEINLONDON-cover-web.jpg',
-    '/works_covers/009-ASHRAA-cover-web.jpg',
-
+  '/works_covers/003-ASHRAA-cover-web.jpg',
   '/works_covers/004-ELKONIN-cover-web.jpg',
 
   '/works_covers/005-BACK_AGAIN-cover-web.jpg',
@@ -43,7 +40,7 @@ const pictures = [
   '/works_covers/007-SADDEST-TRUTH-cover-web.jpg',
   '/works_covers/008-ALL_IN_VEIN-cover-web.jpg',
 
-    '/works_covers/003-PXG-cover-web.jpg',
+  '/works_covers/009-PXG-cover-web.jpg',
   '/works_covers/010-MAINECHOICE-cover-web.jpg',
   '/works_covers/011-FABRICTODIEIN-cover-web.jpg',
   '/works_covers/012-backagain-cover-web.jpg'
@@ -52,7 +49,7 @@ const pictures = [
 const links = [
 '1078917201', 
 '1078789296', 
-'1033280727', 
+'921769339',
 '989511966',
  
 '875195473', 
@@ -60,7 +57,7 @@ const links = [
 '1032488205', 
 '1059411443',
 
-'921769339',
+'1033280727',
 '1053264395',
 '917227537',
 '881407824'
