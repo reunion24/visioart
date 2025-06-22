@@ -13,14 +13,22 @@ interface Item {
 }
 
 const titles = [
-  'STEREOTYPE & jacob.\nBACK AGAIN',
-  '...backagain.backagain...',
-  '[NOTHING004]',
-  'STEREOTYPE\n"LONDON"',
-  'TVOROZHNOE OZERO\nDREAM',
-  '"AU-THEN-TIC"',
-  '[NOTHING003]',
-  'COUREUR'
+'Kaycyy & Sign crushes motorist\nBRUISED',
+'Sam Silver, informal. & Babsy.\nWE IN LONDON',
+'PXG SS25 - CAMPAIGN',
+'STORIES THAT STAY - ELKONIN\nM-Gallery',
+
+
+'STEREOTYPE & jacob.\nBACK AGAIN',
+'STEREOTYPE & YANGHSI\nMIND / STEAL MY SIGHT',
+'Kaycyy & Sign Crushes Motorist\nSADDEST TRUTH',
+'Kaycyy\nALL IN VEIN',
+
+
+'STEREOTYPE & GRACE BUKUNMI\nASHRA’A',
+'Mane Choice x Shenseea - CAMPAIGN',
+'FABRIC TO DIE IN',
+'...backagain.backagain...'
 ];
 
 const pictures = [
@@ -35,8 +43,22 @@ const pictures = [
 ];
 
 const links = [
-  '875195473', '881407824', '881399888', '864549337', '881400642', '832050120', '881401999', '881400684'
+'1078917201', 
+'1078789296', 
+'1033280727', 
+'989511966',
+ 
+'875195473', 
+'993614153', 
+'1032488205', 
+'1059411443',
+
+'921769339',
+'1053264395',
+'917227537',
+'881407824'
 ];
+
 
 const ObjectItems: Item[] = titles.map((title, index) => ({
   title,
