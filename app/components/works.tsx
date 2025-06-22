@@ -15,8 +15,8 @@ interface Item {
 const titles = [
 'Kaycyy & Sign crushes motorist\nBRUISED',
 'Sam Silver, informal. & Babsy.\nWE IN LONDON',
-'STORIES THAT STAY - ELKONIN\nM-Gallery',
 'STEREOTYPE & GRACE BUKUNMI\nASHRA’A',
+'STORIES THAT STAY - ELKONIN\nM-Gallery',
 
 'STEREOTYPE & jacob.\nBACK AGAIN',
 'STEREOTYPE & YANGHSI\nMIND / STEAL MY SIGHT',
