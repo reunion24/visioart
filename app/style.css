@@ -358,7 +358,7 @@ p {
 .page5 {
   height: 86vh;
   width: 100%;
-  background-color: #000; /* Use black background as default */
+  /* background-color: #000; Use black background as default */
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -366,4 +366,9 @@ p {
   flex-grow: 1;
   font-family: 'futura-pt', sans-serif;
   position: relative;
+    background: url(/visioart-page5.jpg);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
