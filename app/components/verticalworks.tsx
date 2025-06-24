@@ -6,24 +6,40 @@ import Player from '@vimeo/player';
 import './verticalworks.css';
 
 const titles = [
-    'Video 1', 'Video 2', 'Video 3', 'Video 4', 'Video 5', 'Video 6',
-    'Video 7', 'Video 8', 'Video 9', 'Video 10', 'Video 11', 'Video 12'
+    'Video 1', 
+    'Video 2', 
+    'Video 3', 
+    'Video 4', 
+    'Video 5', 
+    'Video 6',
+
+    'Video 7', 
+    'Video 8', 
+    'Video 9', 
+    'Video 10', 
+    'Video 11', 
+    'Video 12', 
+    'Video 13',
+    'Video 14'
 ];
 
 const links = [
     '889240821',
-    '1085084229',
+    '1095487597',
     '908013727',
+    '1095487642',
     '1034696269',
+    '1095487655',
+
+    '1095487634',
     '1056696558',
     '1056696261',
-
     '1056694236',
-    '1056692717',
     '1056692470',
     '1056686337',
-    '889240821',
-    '889240821'
+
+    '1095488289',
+    '1095488279'
 ];
 
 const ObjectItems = titles.map((title, index) => ({
