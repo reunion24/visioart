@@ -6,39 +6,41 @@ import Player from '@vimeo/player';
 import './verticalworks.css';
 
 const titles = [
-    'Video 1', 
-    'Video 2', 
-    'Video 3', 
-    'Video 4', 
-    'Video 5', 
+    'Video 1',
+    'Video 2',
+    'Video 3',
+    'Video 4',
+    'Video 5',
     'Video 6',
 
-    'Video 7', 
-    'Video 8', 
-    'Video 9', 
-    'Video 10', 
-    'Video 11', 
-    'Video 12', 
+    'Video 7',
+    'Video 8',
+    'Video 9',
+    'Video 10',
+    'Video 11',
+    'Video 12',
     'Video 13',
-    'Video 14'
+    'Video 14',
+    'Video 15'
 ];
 
 const links = [
     '889240821',
-    '1095487597',
     '908013727',
+    '1095482231',
     '1095487642',
+    '1095482287',
+    '1095487634',
+
+    '1095487597',
     '1034696269',
     '1095487655',
-
-    '1095487634',
     '1056696558',
+    '1095482312',
     '1056696261',
-    '1056694236',
-    '1056692470',
-    '1056686337',
 
     '1095488289',
+    '1095482330',
     '1095488279'
 ];
 
