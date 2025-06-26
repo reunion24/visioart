@@ -1,4 +1,14 @@
 .vworks-gallery-container {
+    /* Hide scrollbar for all browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.vworks-gallery-container::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+.vworks-gallery-container {
     display: flex;
     flex-direction: row;
     overflow-x: visible;

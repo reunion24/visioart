@@ -97,7 +97,9 @@ const VerticalWorks = () => {
         };
 
         container.addEventListener('scroll', handleScroll);
-        handleScroll(); // initial check
+        setTimeout(() => {
+            handleScroll(); // delayed initial check
+        }, 100);
 
         return () => {
             container.removeEventListener('scroll', handleScroll);
@@ -156,12 +158,20 @@ const VerticalWorks = () => {
                 </div>
             </div>
             <div className="vworks-gallery-nav-wrapper">
-                {showPrev && (
-                    <button className="vworks-gallery-nav left" onClick={handlePrev}>←</button>
-                )}
-                {showNext && (
-                    <button className="vworks-gallery-nav right" onClick={handleNext}>→</button>
-                )}
+                <button
+                    className="vworks-gallery-nav left"
+                    onClick={handlePrev}
+                    style={{ visibility: showPrev ? 'visible' : 'hidden' }}
+                >
+                    ←
+                </button>
+                <button
+                    className="vworks-gallery-nav right"
+                    onClick={handleNext}
+                    style={{ visibility: showNext ? 'visible' : 'hidden' }}
+                >
+                    →
+                </button>
             </div>
         </div>
     );
