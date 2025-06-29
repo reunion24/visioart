@@ -1,3 +1,28 @@
+@media not all and (min-resolution:.001dpcm) {
+  @supports (-webkit-touch-callout: none) {
+    /* iOS Safari-specific rules */
+
+    html, body {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: none;
+      touch-action: pan-y;
+    }
+
+    .main-container {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      will-change: transform;
+      contain: paint;
+      backface-visibility: hidden;
+    }
+
+    .main-container > div {
+      backface-visibility: hidden;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
 @import url('https://use.typekit.net/saj2vem.css');
 
 
