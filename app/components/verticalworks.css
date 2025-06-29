@@ -61,8 +61,8 @@
 
 .vworks-video-container:hover {
     z-index: 99;
-    transform: scale(1.1);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(1.13);
+    /* box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); */
     position: relative;
 }
 
@@ -182,4 +182,28 @@
     margin: 0 0.25rem;
     flex: 0 0 calc((100% - 5rem) / 6);
     /* Adjusted total gap to match actual padding/margin */
+}
+
+
+.vworks-title-badge {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 500;
+    padding: 3px 8px;
+    border-radius: 6px;
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-family: 'futura-pt', sans-serif;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.vworks-video-container:hover .vworks-title-badge {
+    opacity: 0;
 }

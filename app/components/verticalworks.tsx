@@ -5,29 +5,6 @@ import { AlignJustify, X } from 'lucide-react';
 import Player from '@vimeo/player';
 import './verticalworks.css';
 
-const titles = [
-    'Video 1',
-    'Video 2',
-    'Video 3',
-    'Video 4',
-    'Video 5',
-    'Video 6',
-
-    'Video 7',
-    'Video 8',
-    'Video 9',
-    'Video 10',
-    'Video 11',
-    'Video 12',
-
-    'Video 13',
-    'Video 14',
-    'Video 15',
-    'Video 16',
-    'Video 17',
-    'Video 18'
-];
-
 const links = [
     '889240821',
     '1095487597',
@@ -51,18 +28,33 @@ const links = [
     '1095488279'
 ];
 
-const ObjectItems = titles.map((title, index) => ({
-    title,
-    link: links[index]
-}));
-
 const VerticalWorks = () => {
+    const [ObjectItems, setObjectItems] = useState<{ title: string, link: string }[]>([]);
     const [index, setIndex] = useState(0);
     const [showPrev, setShowPrev] = useState(false);
     const [showNext, setShowNext] = useState(true);
     const itemsPerPage = 6;
     const containerRef = useRef<HTMLDivElement>(null);
     const iframeRefs = useRef<(HTMLIFrameElement | null)[]>([]);
+
+    useEffect(() => {
+      async function fetchTitles() {
+        const results = await Promise.all(
+          links.map(async (link) => {
+            try {
+              const res = await fetch(`https://vimeo.com/api/oembed.json?url=https://vimeo.com/${link}`);
+              const data = await res.json();
+              return { title: data.title, link };
+            } catch {
+              return { title: 'Untitled', link };
+            }
+          })
+        );
+        setObjectItems(results);
+      }
+
+      fetchTitles();
+    }, []);
 
     const handleNext = () => {
         if (containerRef.current) {
@@ -144,6 +136,7 @@ const VerticalWorks = () => {
                 <div className="vworks-gallery-track">
                     {ObjectItems.map((item, i) => (
                         <div className="vworks-video-container" key={i}>
+                            <div className="vworks-title-badge">{item.title}</div>
                             <div className="vworks-iframe-wrapper">
                                 <iframe
                                     ref={el => iframeRefs.current[i] = el}
@@ -152,7 +145,6 @@ const VerticalWorks = () => {
                                     allow="autoplay; fullscreen; picture-in-picture"
                                 ></iframe>
                             </div>
-                            <div className="vworks-video-overlay">{item.title}</div>
                         </div>
                     ))}
                 </div>
