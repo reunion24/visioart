@@ -111,8 +111,10 @@ const Works = () => {
     event.stopPropagation();
   };
 
+  const isSafari = typeof window !== 'undefined' && /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
   return (
-    <div className="holster">
+    <div className={`holster ${isSafari ? 'safari-browser' : ''}`}>
     <div className="visio-container">
       {slides.map((slideItems, index) => (
         <div key={index} className="slide">

@@ -1,3 +1,4 @@
+@import url('https://use.typekit.net/saj2vem.css');
 @media not all and (min-resolution:.001dpcm) {
   @supports (-webkit-touch-callout: none) {
     /* iOS Safari-specific rules */
@@ -23,13 +24,13 @@
     }
   }
 }
-@import url('https://use.typekit.net/saj2vem.css');
 
 
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'futura-pt', sans-serif;
 }
 
 
@@ -193,8 +194,9 @@ display: flex;
   display: flex;
   flex-grow: 1;
 
+  font-family: 'futura-pt', sans-serif;
+
   font-size: 48px;
-  font-family: 'Inter', sans-serif;
   position: relative;
 
   /* Additional styles for the slides */
@@ -405,4 +407,12 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance:none) {
+    body, p, .navbar-fixed-top, .main, .page1, .page2, .page3, .page4, .page5 {
+      font-family: 'futura-pt', sans-serif !important;
+    }
+  }
 }
