@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  position: fixed;
+  overflow-x: hidden;
 }
 
 
@@ -25,6 +25,8 @@ body {
   flex: none;
   height: 100vh;
   width: 100%; /* Ensure full width */
+  touch-action: pan-y;
+  overscroll-behavior: contain;
 }
 
 .main-mandatory-scroll-snapping {
@@ -48,7 +50,8 @@ body {
   scroll-snap-align: start; /* Changed to start for vertical alignment */
   flex: none;
   width: 100%; /* Full width */
-  height: 86vh; /* Adjust height as needed */
+  height: 86vh;
+  height: 86dvh;
   scroll-margin-top: 14vh;
   scroll-snap-align: start; 
   scroll-snap-stop: always;
@@ -57,7 +60,8 @@ body {
 }
 
 .main-container > div:first-child {
-  height: 100vh; /* Adjust height as needed */
+  height: 100vh;
+  height: 100dvh;
   scroll-snap-align: start; /* Changed to start for vertical alignment */
   scroll-snap-stop: always;
 
@@ -150,6 +154,7 @@ display: flex;
 
 .page1 {
   height: 100vh;
+  height: 100dvh;
   width: 100%;
   color: rgb(255, 255, 255);
   background: url(/visioart-main.jpg);
@@ -173,6 +178,7 @@ display: flex;
 .page2 {
   position: relative;
   height: 86vh;
+  height: 86dvh;
   width: 100%;
   align-items: center;
   justify-content: center;
@@ -190,6 +196,7 @@ display: flex;
 .page3 {
   /* bottom: 0%; */
   height: 86vh;
+  height: 86dvh;
   width: 100%;
   background: url(/visioart-about.jpg);
   background-blend-mode: darken;
@@ -214,6 +221,7 @@ display: flex;
 .page4 {
   bottom: 0%;
   height: 86vh;
+  height: 86dvh;
   width: 100%;
   background: rgba(0, 0, 0, 0.7) url(/bg_photos/bgphoto2.jpeg);
   background-blend-mode: darken;
@@ -357,6 +365,7 @@ p {
 
 .page5 {
   height: 86vh;
+  height: 86dvh;
   width: 100%;
   /* background-color: #000; Use black background as default */
   align-items: center;
