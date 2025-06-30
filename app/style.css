@@ -4,7 +4,8 @@
 body {
   margin: 0;
   padding: 0;
-  position: fixed;
+  /* position: fixed; */
+  scroll-snap-type: y mandatory;
 }
 
 
@@ -19,6 +20,9 @@ body {
 }
 
 .main-container {
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS Safari */
+  overflow-y: scroll;
   display: flex;
   flex-direction: column; /* Changed to column */
   overflow: auto;
@@ -233,6 +237,26 @@ display: flex;
   /* Additional styles for the slides */
 }
 
+
+
+.page5 {
+  height: 86vh;
+  width: 100%;
+  /* background-color: #000; Use black background as default */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+  font-family: 'futura-pt', sans-serif;
+  position: relative;
+    background: url(/visioart-page5.jpg);
+  background-blend-mode: darken;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* .contact-handle {
 
   font-family: sans-serif;
@@ -353,22 +377,18 @@ p {
 }
 
 
+.page1, .page2, .page3, .page4, .page5 {
+  flex: 0 0 auto; /* don’t allow grow/shrink */
+}
 
 
-.page5 {
-  height: 86vh;
-  width: 100%;
-  /* background-color: #000; Use black background as default */
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  display: flex;
-  flex-grow: 1;
-  font-family: 'futura-pt', sans-serif;
-  position: relative;
-    background: url(/visioart-page5.jpg);
-  background-blend-mode: darken;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* 
+@supports (-webkit-touch-callout: none) {
+  .main-container > div {
+    scroll-snap-align: start;
+  }
+} */
+
+body {
+  -webkit-font-smoothing: antialiased;
 }
