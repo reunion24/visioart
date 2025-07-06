@@ -9,16 +9,17 @@ export const metadata: Metadata = {
 		default: "visioart",
 		template: "%s | visioart.io",
 	},
-	description: "Video Production Company",
+	description: "STILLS, MOTION & DIGITAL CONTENT\nFOR MUSIC, FASHION & LUXURY BRANDS",
 	openGraph: {
 		title: "visioart",
 		description:
-			"Video Production Company",
+			"STILLS, MOTION & DIGITAL CONTENT\nFOR MUSIC, FASHION & LUXURY BRANDS",
 		url: "https://visioart.io",
 		siteName: "visioart",
 		images: [
 			{
-				url: "https://visioart.io/iconic_logo_visioart.png",
+				// url: "https://visioart.io/iconic_logo_visioart.png",
+				url: "https://visioart.io/logo_visioart.png",
 				width: 1920,
 				height: 1080,
 			},
