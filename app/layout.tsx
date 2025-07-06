@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 		description:
 			"STILLS, MOTION & DIGITAL CONTENT\nFOR MUSIC, FASHION & LUXURY BRANDS",
 		url: "https://visioart.io",
-		siteName: "visioart",
+		siteName: "VISIOART",
 		images: [
 			{
 				// url: "https://visioart.io/iconic_logo_visioart.png",
