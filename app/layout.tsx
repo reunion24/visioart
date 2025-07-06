@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 	},
 	description: "STILLS, MOTION & DIGITAL CONTENT\nFOR MUSIC, FASHION & LUXURY BRANDS",
 	openGraph: {
-		title: "VISIOART,
+		title: "VISIOART",
 		description:
 			"STILLS, MOTION & DIGITAL CONTENT\nFOR MUSIC, FASHION & LUXURY BRANDS",
 		url: "https://visioart.io",
