@@ -18,8 +18,7 @@ export const metadata: Metadata = {
 		siteName: "VISIOART",
 		images: [
 			{
-				// url: "https://visioart.io/iconic_logo_visioart.png",
-				url: "https://visioart.io/logo_visioart.png",
+				url: "https://visioart.io/logo_visioart_info.jpg",
 				width: 1920,
 				height: 1080,
 			},
@@ -63,11 +62,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-			
+
 			<body
-				className={`bg-black ${
-					process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-				}`}
+				className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+					}`}
 			>
 				<Analytics />
 				{children}
